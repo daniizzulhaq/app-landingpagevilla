@@ -54,6 +54,7 @@ class BundledPropertyInstaller
             DB::transaction(function () use ($snapshot, $version) {
                 $state = DB::table('website_settings')->where('key', self::VERSION_KEY)->lockForUpdate()->first();
                 if ($state->value === $version) return;
+                $this->updateOriginalTitles($snapshot['title_updates'] ?? []);
                 $references = [];
                 foreach (['property_types' => 'slug', 'locations' => 'slug', 'amenities' => 'name'] as $table => $key) {
                     foreach ($snapshot['references'][$table] as $record) {
@@ -96,6 +97,22 @@ class BundledPropertyInstaller
         } finally {
             flock($lock, LOCK_UN);
             fclose($lock);
+        }
+    }
+
+    private function updateOriginalTitles(array $updates): void
+    {
+        foreach ($updates as $update) {
+            $property = DB::table('properties')->where('property_code', $update['property_code'])
+                ->where('title', $update['from'])->where('is_demo', true)->whereNull('deleted_at')->first();
+            if (! $property || $property->title !== $update['from']) continue;
+            $fields = ['title' => $update['to'], 'updated_at' => now()];
+            $previousSeo = $update['from'].' — Demo Listing | PropertyME';
+            if ($property->seo_title === $previousSeo) $fields['seo_title'] = $update['to'].' — Demo Listing | PropertyME';
+            DB::table('properties')->where('id', $property->id)->update($fields);
+            DB::table('property_images')->where('property_id', $property->id)
+                ->where('alt_text', 'AI-generated illustration for '.$update['from'].' — demo only')
+                ->update(['alt_text' => 'AI-generated illustration for '.$update['to'].' — demo only']);
         }
     }
 }

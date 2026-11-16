@@ -106,4 +106,55 @@ class BundledPropertyInstallTest extends PropertymeTestCase
         $this->assertDatabaseCount('properties', 12);
         $this->assertDatabaseCount('property_images', 30);
     }
+
+    public function test_property_names_update_after_pull_while_hosting_customizations_are_preserved(): void
+    {
+        Storage::fake('public');
+        Storage::fake('local');
+        $directory = Storage::disk('local')->path('snapshot');
+        File::copyDirectory(database_path('content/local-properties'), $directory);
+        $currentJson = File::get($directory.'/snapshot.json');
+        $previous = json_decode($currentJson, true);
+        foreach ($previous['title_updates'] as $update) {
+            foreach ($previous['properties'] as &$entry) {
+                if ($entry['property']['property_code'] !== $update['property_code']) continue;
+                $entry['property']['title'] = $update['from'];
+                $entry['property']['seo_title'] = $update['from'].' — Demo Listing | PropertyME';
+                foreach ($entry['images'] as &$image) $image['alt_text'] = 'AI-generated illustration for '.$update['from'].' — demo only';
+                unset($image);
+            }
+            unset($entry);
+        }
+        unset($previous['title_updates']);
+        $previousJson = json_encode($previous, JSON_THROW_ON_ERROR);
+        File::put($directory.'/snapshot.json', $previousJson);
+        File::put($directory.'/version.txt', hash('sha256', $previousJson));
+        $installer = app(BundledPropertyInstaller::class);
+        $installer->install($directory);
+        $original = Property::where('property_code', 'DEMO-PM-007')->firstOrFail();
+        $this->assertSame('Tropical Courtyard Stay', $original->title);
+        $imageId = $original->images()->first()->id;
+        DB::table('property_images')->where('id', $imageId)->update(['alt_text' => 'A custom image caption']);
+        Property::where('property_code', 'DEMO-PM-008')->firstOrFail()->update(['title' => 'My own villa title']);
+        Property::where('property_code', 'DEMO-PM-009')->firstOrFail()->delete();
+        Property::where('property_code', 'DEMO-PM-010')->firstOrFail()->update(['is_demo' => false]);
+
+        File::put($directory.'/snapshot.json', $currentJson);
+        File::put($directory.'/version.txt', hash('sha256', $currentJson));
+        $installer->install($directory);
+        $installer->install($directory);
+
+        $this->assertDatabaseCount('properties', 12);
+        $this->assertDatabaseCount('property_images', 30);
+        $this->assertSame('Avora', $original->fresh()->title);
+        $this->assertSame('Avora — Demo Listing | PropertyME', $original->fresh()->seo_title);
+        $this->assertSame($original->price, $original->fresh()->price);
+        $this->assertSame($original->slug, $original->fresh()->slug);
+        $this->assertDatabaseHas('property_images', ['id' => $imageId, 'alt_text' => 'A custom image caption']);
+        $this->assertDatabaseHas('property_images', ['property_id' => $original->id, 'alt_text' => 'AI-generated illustration for Avora — demo only']);
+        $this->assertDatabaseHas('properties', ['property_code' => 'DEMO-PM-008', 'title' => 'My own villa title']);
+        $this->assertDatabaseHas('properties', ['property_code' => 'DEMO-PM-009', 'title' => 'Cliffside Ocean Villa']);
+        $this->assertSoftDeleted('properties', ['property_code' => 'DEMO-PM-009']);
+        $this->assertDatabaseHas('properties', ['property_code' => 'DEMO-PM-010', 'title' => 'Seminyak Living Villa', 'is_demo' => false]);
+    }
 }

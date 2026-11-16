@@ -32,6 +32,9 @@ class ExportLocalProperties extends Command
         $pivots = DB::table('amenity_property')->whereIn('property_id', $ids)->orderBy('amenity_id')->get();
         $snapshot = [
             'format' => 1,
+            'title_updates' => is_file($directory.'/title-updates.json')
+                ? json_decode(File::get($directory.'/title-updates.json'), true, 512, JSON_THROW_ON_ERROR)
+                : [],
             'references' => [
                 'property_types' => DB::table('property_types')->whereIn('id', $properties->pluck('property_type_id'))->orderBy('id')->get()->all(),
                 'locations' => DB::table('locations')->whereIn('id', $properties->pluck('location_id'))->orderBy('id')->get()->all(),
