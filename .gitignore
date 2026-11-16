@@ -1,0 +1,23 @@
+/vendor
+/node_modules
+# Include production assets when pushing to GitHub.
+!/public/build/
+!/public/build/**
+/public/hot
+/public/storage
+/storage/*.key
+/storage/app/public/*
+!/storage/app/public/.gitignore
+!/storage/app/public/.htaccess
+/.env
+/.env.*
+!/.env.example
+!/.env.production.example
+/.phpunit.result.cache
+/.runtime
+/.idea
+/.vscode
+/auth.json
+/npm-debug.log
+/database/*.sql
+/database/*.sql.gz

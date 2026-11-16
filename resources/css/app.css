@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root { color-scheme: light; }
+    html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+    body { @apply bg-ivory font-sans text-ink antialiased; }
+    h1,h2,h3,h4 { @apply font-serif font-normal; }
+    button,a,input,select,textarea { -webkit-tap-highlight-color: transparent; }
+    a,button { touch-action: manipulation; }
+    button:focus-visible,a:focus-visible { @apply outline outline-2 outline-offset-4 outline-gold; }
+    input,select,textarea { @apply min-w-0; }
+    [x-cloak] { display: none !important; }
+    ::selection { @apply bg-gold/40 text-deep; }
+    dialog::backdrop { background: rgba(5,16,25,.92); backdrop-filter: blur(8px); }
+}
+@layer components {
+    .hero-search-shell { @apply grid grid-cols-2 gap-1 overflow-hidden rounded-2xl border-[5px] border-white/20 bg-white p-1 text-left text-navy shadow-xl lg:grid-cols-[1fr_1fr_1fr_auto] lg:rounded-full; }
+    .hero-search-field { @apply min-w-0 rounded-xl bg-white px-3 py-3 sm:px-5 lg:rounded-none lg:border-r lg:border-line; }
+    .hero-search-field label { @apply mb-1 block text-[10px] font-semibold; }
+    .hero-search-field select { @apply w-full cursor-pointer border-0 bg-transparent py-1 pr-5 text-[11px] text-muted outline-none focus:ring-1 focus:ring-gold; }
+    .hero-search-submit { @apply flex min-h-14 items-center justify-center gap-2 rounded-xl bg-navy px-3 py-4 text-[10px] font-medium text-white transition hover:bg-deep sm:gap-3 sm:px-7 sm:text-xs lg:rounded-full; }
+    .hero-quick-tag { @apply inline-flex min-h-9 items-center rounded-full border border-white/30 bg-white/10 px-4 text-[10px] font-medium text-white backdrop-blur transition hover:bg-white/25; }
+    .hero-intent-panel { @apply flex flex-col items-center justify-between gap-4 rounded-2xl bg-white p-5 text-sm text-navy shadow-xl sm:flex-row lg:rounded-full lg:pl-8; }
+    .collection-tab { @apply inline-flex min-h-10 items-center justify-center rounded-full border border-line bg-[#F0F1F0] px-5 py-2 text-[11px] font-medium text-navy/60 transition hover:bg-navy/10; }
+    .collection-tab.active { @apply border-navy bg-navy text-white; }
+    .property-chip { @apply inline-flex min-h-6 items-center gap-1.5 rounded bg-[#EFF0EF] px-2 py-1 text-[10px] leading-4 text-ink/80; }
+    .card-round-button { @apply flex h-9 w-9 items-center justify-center rounded-full border border-white/40 bg-white/95 text-navy shadow-sm transition hover:bg-navy hover:text-white; }
+    .container-wide { @apply mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 xl:px-20; }
+    .section-space { @apply py-20 md:py-28 lg:py-32; }
+    .eyebrow { @apply flex items-center gap-3 text-[10px] font-medium uppercase tracking-[.24em] sm:text-[11px]; }
+    .eyebrow::before { content: ''; @apply inline-block h-px w-8 shrink-0 bg-gold; }
+    .section-title { @apply mt-5 text-[2.7rem] leading-[1.05] tracking-[-.035em] sm:text-6xl lg:text-[4.25rem]; }
+    .body-copy { @apply text-sm leading-[1.95] text-muted md:text-[15px]; }
+    .button { @apply inline-flex min-h-12 items-center justify-center gap-5 border px-6 py-3.5 text-[11px] font-medium uppercase tracking-[.13em] transition duration-300; }
+    .button-gold { @apply border-gold bg-gold text-deep hover:border-[#d6bb96] hover:bg-[#d6bb96]; }
+    .button-navy { @apply border-navy bg-navy text-white hover:border-deep hover:bg-deep; }
+    .button-whatsapp { @apply border-[#15744E] bg-[#15744E] text-white hover:border-[#105B3D] hover:bg-[#105B3D]; }
+    .button-outline { @apply border-navy/25 text-navy hover:border-navy hover:bg-navy hover:text-white; }
+    .button-light { @apply border-white/50 text-white hover:bg-white hover:text-navy; }
+    .text-link { @apply inline-flex min-h-11 items-center gap-6 border-b border-gold py-2 text-[10px] font-semibold uppercase tracking-[.15em] transition hover:gap-8; }
+    .nav-link { @apply relative py-3 text-[11px] font-medium tracking-wide opacity-80 transition hover:opacity-100; }
+    .nav-link::after { content:''; @apply absolute bottom-1 left-0 h-px w-0 bg-gold transition-all duration-300; }
+    .nav-link:hover::after,.nav-link[aria-current=page]::after { @apply w-full; }
+    .field { @apply block min-h-12 w-full rounded-none border border-line bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-gray-400 focus:border-gold focus:ring-1 focus:ring-gold; }
+    .field-label { @apply mb-2 block text-[11px] font-semibold tracking-wide text-navy; }
+    .admin-label { @apply mb-2 block text-xs font-medium text-navy; }
+    .admin-card { @apply border border-line bg-white p-6 md:p-8; }
+    .admin-link { @apply flex min-h-11 items-center gap-3 border-l-2 border-transparent px-5 py-2.5 text-xs text-white/60 transition hover:bg-white/5 hover:text-white; }
+    .admin-link.active { @apply border-gold bg-white/5 text-gold; }
+    .status-badge { @apply inline-flex items-center gap-1.5 rounded-sm bg-ivory px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider text-navy; }
+    .image-zoom { @apply h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105; }
+    .editorial-copy { @apply max-w-none text-[15px] leading-[2] text-muted; }
+    .editorial-copy p + p { @apply mt-6; }
+    .reveal { opacity: 1; transform: none; }
+    .motion-ready .reveal { opacity: 0; transform: translateY(20px); transition: opacity .75s ease, transform .75s ease; }
+    .motion-ready .reveal.is-visible { opacity: 1; transform: none; }
+}
+.hero-title { font-size: clamp(3.1rem, 6.3vw, 6.25rem); line-height: .99; letter-spacing: -.035em; }
+.hero-shade { background: linear-gradient(90deg,rgba(6,19,29,.77) 0%,rgba(6,19,29,.38) 58%,rgba(6,19,29,.1) 100%),linear-gradient(0deg,rgba(6,19,29,.65),transparent 40%); }
+.service-gradient { background: linear-gradient(0deg,rgba(8,25,38,.93),rgba(8,25,38,.12) 85%); }
+.architecture-lines { background-image: linear-gradient(90deg,transparent calc(100% - 1px),rgba(198,167,123,.12) 1px); background-size: 25% 100%; }
+.prose-line { white-space: pre-line; overflow-wrap: anywhere; }
+@media (max-width: 639px) { .hero-title { font-size: clamp(2.7rem, 10.8vw, 4.2rem); } }
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *,*::before,*::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    .motion-ready .reveal { opacity:1; transform:none; }
+}

@@ -1,0 +1,26 @@
+{
+  "generator": "Built-in image_gen",
+  "purpose": "Original AI-generated architectural illustrations for explicitly marked local demo content; not photographs of real listings.",
+  "images": [
+    {
+      "file": "public/images/demo/hero.webp",
+      "prompt": "Create an original premium architectural visualization for the hero background of a Bali real-estate website, landscape 1536x1024. A contemporary tropical cliffside villa in Bali at blue-hour sunset, expansive infinity swimming pool reflecting warm interior light, teak sliding doors, limestone walls, lush palms, calm Indian Ocean horizon. Photorealistic editorial architectural rendering, tasteful resort design, realistic geometry, no people, no signs, no watermarks, no logos, no text. Wide cinematic composition with generous calm sky and negative space in the center/top-middle to overlay website heading and a search bar. Camera from poolside terrace, house predominantly on right, ocean to left. This is fictional illustrative concept art, not an existing real listing."
+    },
+    {
+      "file": "public/images/demo/courtyard.webp",
+      "prompt": "Original fictional architectural visualization, landscape 1536x1024. A modern two-bedroom Bali courtyard villa at soft morning light, small private turquoise pool between warm ivory limestone volumes, sliding timber glass doors, sunken outdoor sofa, tropical plants, earthy ceramics. Calm high-end editorial real estate photography style, photorealistic but an invented property. Wide frontal camera from pool edge, strong clean composition, realistic architecture. No people, text, logos or watermarks."
+    },
+    {
+      "file": "public/images/demo/interior.webp",
+      "prompt": "Original fictional architectural visualization, landscape 1536x1024. A luxurious contemporary Bali villa living room open to lush garden and swimming pool, double-height teak and limestone interior, soft white curved sofa, natural woven rug, warm oak kitchen, sculptural pendant lamp and subtle leafy plants. Architectural editorial photography, realistic light and geometry, inviting natural daytime palette, wide angle with straight verticals. Invented property, not an existing listing. No people, text, logos or watermarks."
+    },
+    {
+      "file": "public/images/demo/jungle.webp",
+      "prompt": "Original fictional architectural visualization, landscape 1536x1024. An elegant private three-bedroom villa overlooking dense tropical jungle in Ubud Bali, an infinity lap pool, open-air timber pavilion and simple stone terraces surrounded by lush palm trees. Early morning mist and warm golden light. Premium editorial architectural photography, realistic construction, carefully framed wide view from terrace. Invented concept property, not a real listing. No people, no text, no logos, no watermark."
+    },
+    {
+      "file": "public/images/demo/land.webp",
+      "prompt": "Original fictional landscape visualization, landscape 1536x1024. A sunlit undeveloped grassy hillside plot in tropical Bali, gently sloping green land with coconut palms, terraced rice fields in the middle distance and mountains on the horizon. Natural drone photography at moderate height, realistic rural landscape and soft morning light, clean detailed composition for a real-estate land example. No buildings as main subject, no plot boundary graphics, no people, no text, no logos, no watermark. Entire landscape is illustrative and fictional."
+    }
+  ]
+}

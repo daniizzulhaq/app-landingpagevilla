@@ -1,0 +1,9 @@
+@extends('layouts.admin')
+@section('title',ucfirst($group).' Settings')
+@section('content')
+@php $baseGroup=Str::before($group,'-id'); @endphp
+<nav class="mb-7 flex flex-wrap gap-3" aria-label="Content language"><a href="{{ route('admin.settings.edit',['group'=>$baseGroup]) }}" class="collection-tab {{ $group===$baseGroup ? 'active' : '' }}">English / Shared settings</a><a href="{{ route('admin.settings.edit',['group'=>$baseGroup.'-id']) }}" class="collection-tab {{ str_ends_with($group,'-id') ? 'active' : '' }}">Bahasa Indonesia</a></nav>
+<div class="mb-8"><p class="eyebrow text-muted">Make it yours</p><h1 class="mt-3 text-4xl text-navy">{{ $group==='homepage' ? 'Homepage Content' : ($group==='seo' ? 'SEO Settings' : 'Website Settings') }}</h1><p class="mt-3 text-xs leading-6 text-muted">{{ $group==='company' ? 'Set your verified company details. WhatsApp links use this number across the entire website.' : 'Update the content displayed on your public website.' }}</p></div>
+@if($group==='company')<p class="mb-6 rounded-xl border border-line bg-white px-5 py-4 text-xs leading-7 text-muted">Isi kolom <strong class="text-navy">WhatsApp</strong> dengan nomor perusahaan aktif. Nomor ini digunakan untuk semua kartu properti, detail, layanan, Contact, dan widget chat. Format Indonesia boleh diawali 08 atau 62.</p>@endif
+<form action="{{ route('admin.settings.update',['group'=>$group]) }}" method="POST" enctype="multipart/form-data">@csrf @method('PUT')<div class="admin-card"><div class="grid gap-7 sm:grid-cols-2">@foreach($fields as $key=>[$label,$type])@include('admin.partials.field',['name'=>str_replace('.','__',$key),'definition'=>['label'=>$label,'type'=>$type,'options'=>[]],'value'=>$values[$key] ?? null,'resource'=>'settings'])@endforeach</div></div><div class="mt-6 flex justify-end"><button class="button button-navy" type="submit">Save Settings<x-icon name="check" class="h-4 w-4"/></button></div></form>
+@endsection
