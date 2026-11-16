@@ -1,6 +1,6 @@
 @props(['locations', 'types'])
 <section class="relative flex min-h-[940px] flex-col overflow-hidden bg-navy text-white sm:min-h-[850px] lg:min-h-[900px] lg:h-[100svh]">
-    <img src="{{ \App\Support\Images::url($settings->get('homepage.hero_image')) }}" data-fallback="{{ asset('images/architecture.svg') }}" alt="Illustrative tropical villa and infinity pool overlooking the ocean" width="1536" height="1024" fetchpriority="high" class="absolute inset-0 h-full w-full object-cover object-center">
+    <img src="{{ \App\Support\Images::url($settings->get('homepage.hero_image')) }}" data-fallback="{{ asset('images/architecture.svg') }}" alt="Tropical villa and infinity pool overlooking the ocean" width="1536" height="1024" fetchpriority="high" class="absolute inset-0 h-full w-full object-cover object-center">
     <div class="absolute inset-0 bg-deep/45"></div><div class="absolute inset-0 bg-gradient-to-t from-deep/70 via-transparent to-deep/20"></div>
     <div class="container-wide relative z-10 flex flex-1 flex-col justify-center pb-10 pt-40 text-center lg:pt-36">
         <p class="eyebrow justify-center text-white/80">{{ $settings->get('homepage.hero_eyebrow') }}</p>

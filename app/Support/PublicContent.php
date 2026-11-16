@@ -20,6 +20,15 @@ class PublicContent
         $value = $record->description ?? '';
         if (!$record->is_demo) return $value;
         $paragraphs=preg_split('/\R\s*\R/',$value);
-        return implode("\n\n",array_filter($paragraphs,fn($paragraph)=>!preg_match('/^(DEMO\b|For a genuine property inquiry|Replace this example)/i',trim($paragraph))));
+        $value = implode("\n\n",array_filter($paragraphs,fn($paragraph)=>!preg_match('/^(DEMO\b|For a genuine property inquiry|Replace this example)/i',trim($paragraph))));
+        return str_replace([
+            'Explore the gallery and specifications to preview the property browsing experience.',
+            'Use this example to explore land listing specifications and property inquiries.',
+            'An illustrative landscape concept with',
+        ], [
+            'Explore the gallery and property specifications.',
+            'Contact our team for property details and inquiries.',
+            'A landscape with',
+        ], $value);
     }
 }

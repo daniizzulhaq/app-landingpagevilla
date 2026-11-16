@@ -61,7 +61,7 @@ Tidak perlu mengimpor SQL, mengubah `.env`, menjalankan seeder, memasang Git hoo
 
 Installer menyimpan checksum versi di database. Kunjungan berikutnya hanya memeriksa versi, tanpa mengulang impor. Lock file dan lock database mencegah dua kunjungan mengimpor bersamaan. Media diverifikasi dan disalin sebelum transaksi database ditandai selesai; pemasangan yang gagal dapat dicoba lagi pada kunjungan berikutnya.
 
-Record dengan kode **atau** slug yang sudah ada dilewati beserta relasinya. Edit admin, draft, dan soft delete dipertahankan; ID referensi dipetakan ulang sesuai database hosting. Installer tidak membuat atau mengubah akun, pengaturan perusahaan, portfolio, layanan atau testimoni. Situs preview menampilkan keterangan data contoh dan `noindex`; listing demo tetap dikecualikan dari sitemap dan schema properti.
+Record dengan kode **atau** slug yang sudah ada dilewati beserta relasinya. Edit admin, draft, dan soft delete dipertahankan; ID referensi dipetakan ulang sesuai database hosting. Installer tidak membuat atau mengubah akun, pengaturan perusahaan, portfolio, layanan atau testimoni. Label dan pemberitahuan demo tidak ditampilkan pada halaman publik. Penanda internal dan `noindex` tetap berlaku; listing demo tetap dikecualikan dari sitemap dan schema properti.
 
 Pembaruan nama terarah untuk empat villa sewa mengganti nama preview lama dengan Avora, Sofi 1, Sofi 2 dan Casa Daluca pada record demo yang masih memakai nama bawaan. Nama yang sudah disunting di hosting tetap dipertahankan. Lihat [pemetaan dan sumber nama](PROPERTY-NAMES.md).
 

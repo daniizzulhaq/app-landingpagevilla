@@ -1,6 +1,6 @@
 @props(['property'])
 @php
-    $photos = $property->images->map(fn($image)=>['url'=>Storage::disk('public')->url($image->image_path),'alt'=>$property->is_demo ? __('Architectural illustration').': '.$property->title : ($image->alt_text ?: $property->title)])->values()->all();
+    $photos = $property->images->map(fn($image)=>['url'=>Storage::disk('public')->url($image->image_path),'alt'=>$property->is_demo ? $property->title : ($image->alt_text ?: $property->title)])->values()->all();
     if (! count($photos)) $photos = [['url'=>asset('images/architecture.svg'),'alt'=>'Property illustration']];
     $link = route('properties.show',$property->slug);
 @endphp

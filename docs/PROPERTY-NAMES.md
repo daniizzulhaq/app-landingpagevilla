@@ -15,7 +15,8 @@ Website hosting memerlukan login dan tidak diakses untuk mengambil data pribadi.
 
 Ini penyesuaian nama pada slot preview. Foto AI, harga, lokasi, status, dan
 spesifikasi contoh tidak diverifikasi sebagai detail villa tersebut. Record tetap
-`is_demo` dan tetap memiliki pemberitahuan preview serta `noindex`.
+`is_demo` dan `noindex` secara internal. Label dan pemberitahuan demo tidak
+ditampilkan pada halaman publik.
 
 Setelah push/pull dan kunjungan berikutnya, installer mengganti hanya nama lama
 yang masih persis sama pada record demo yang belum dihapus. Judul SEO dan alt

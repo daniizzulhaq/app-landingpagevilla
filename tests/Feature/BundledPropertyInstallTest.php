@@ -17,9 +17,18 @@ class BundledPropertyInstallTest extends PropertymeTestCase
         // Emulate the HTTP runtime while executing this request under PHPUnit's CLI.
         (new \ReflectionProperty($this->app, 'isRunningInConsole'))->setValue($this->app, false);
 
-        $this->get('/properties')->assertOk()->assertSee('Palm Courtyard Villa')->assertSee('Demo content.')->assertSee('noindex,follow');
+        $this->get('/properties')->assertOk()->assertSee('Palm Courtyard Villa')->assertDontSee('Demo content.')->assertSee('noindex,follow');
         $this->assertDatabaseCount('properties', 12);
         $this->assertDatabaseCount('property_images', 30);
+        foreach (['/', '/properties', '/services', '/contact', route('about', [], false), '/properties/demo-palm-courtyard-villa', '/properties/demo-tropical-courtyard-stay'] as $path) {
+            foreach (['en', 'id'] as $locale) {
+                $response = $this->get($path.'?lang='.$locale)->assertOk();
+                $response->assertDontSee('AI-generated')->assertDontSee('illustrative preview content')->assertDontSee('Architectural illustration');
+                $text = preg_replace('~<(script|style)\b[^>]*>.*?</\1>~is', '', $response->getContent());
+                $text = html_entity_decode(strip_tags($text));
+                $this->assertDoesNotMatchRegularExpression('/\b(demo|preview|illustrative|AI-generated)\b/i', $text, $path.' '.$locale);
+            }
+        }
         $this->assertSame(12, Property::published()->count());
         $snapshot = json_decode(File::get(database_path('content/local-properties/snapshot.json')), true);
         foreach ($snapshot['properties'] as $entry) {

@@ -1,6 +1,6 @@
 @props(['testimonial'])
+@unless($testimonial->is_demo)
 <figure class="border border-line bg-white p-8">
-    @if($testimonial->is_demo)<p class="mb-4 text-[9px] font-semibold uppercase tracking-widest text-amber-800">Demo text · Not a client review</p>@endif
     <span class="font-serif text-6xl leading-none text-gold" aria-hidden="true">“</span>
     <blockquote class="mt-3 font-serif text-2xl leading-relaxed text-navy">{{ $testimonial->content }}</blockquote>
     <figcaption class="mt-8 flex items-start gap-4 border-t border-line pt-5 text-xs">
@@ -12,3 +12,4 @@
         </div>
     </figcaption>
 </figure>
+@endunless

@@ -91,8 +91,8 @@ class DemoPreviewTest extends PropertymeTestCase
         $this->assertSame(6,Portfolio::published()->count());
         $this->assertSame('Edited hosted villa',$property->fresh()->title);
         foreach ($property->images as $image) Storage::disk('public')->assertExists($image->image_path);
-        $this->get('/properties')->assertOk()->assertSee('Edited hosted villa')->assertSee('Demo content.')->assertSee('noindex,follow');
-        $this->get('/properties/'.$property->slug)->assertOk()->assertSee('AI-generated')->assertDontSee('"@type":"House"',false);
+        $this->get('/properties')->assertOk()->assertSee('Edited hosted villa')->assertDontSee('Demo content.')->assertSee('noindex,follow');
+        $this->get('/properties/'.$property->slug)->assertOk()->assertDontSee('AI-generated')->assertDontSee('Demo content.')->assertDontSee('"@type":"House"',false);
         $this->get('/portfolio/'.$project->slug)->assertOk();
         $this->get('/sitemap.xml')->assertOk()->assertDontSee('/properties/demo-')->assertDontSee('/portfolio/demo-');
 
