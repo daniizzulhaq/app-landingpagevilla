@@ -58,7 +58,7 @@ Seeder bersifat idempotent (`firstOrCreate`) dan tidak menimpa konten admin. See
 
 ## Data demo dan desain katalog
 
-Data preview lokal dan unggahan demonya telah dibersihkan dari folder proyek. Database server lokal yang terpisah tidak disertakan dalam repository. Instalasi baru melalui seeder default tidak membuat properti, portfolio, testimoni, atau akun admin demo.
+Data preview lokal dan unggahan demo diabaikan Git dan tidak disertakan dalam repository. Database server lokal yang terpisah juga tidak disertakan dalam repository. Instalasi baru melalui seeder default tidak membuat properti, portfolio, testimoni, atau akun admin demo.
 
 Seeder demo tidak dipanggil oleh seeder default. Untuk menambah contoh pada instalasi development lain:
 

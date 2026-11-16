@@ -12,13 +12,13 @@
     if ($settings->get('company.email')) $organization['email'] = $settings->get('company.email');
     if ($settings->get('company.whatsapp')) $organization['telephone'] = '+'.$settings->get('company.whatsapp');
     if ($settings->get('company.instagram')) $organization['sameAs'] = [$settings->get('company.instagram')];
-    if ($settings->get('company.logo')) $organization['logo'] = \App\Support\Images::url($settings->get('company.logo'));
+    $organization['logo'] = $settings->get('company.logo') ? \App\Support\Images::url($settings->get('company.logo')) : asset('images/propertyme-logo.png');
 @endphp
 <!DOCTYPE html><html lang="{{ app()->getLocale() }}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#142635"><title>{{ $metaTitle }}</title><meta name="description" content="{{ $metaDescription }}"><link rel="canonical" href="{{ $canonical }}">
 @if($demoMode || $filteredQuery || View::hasSection('noindex'))<meta name="robots" content="noindex,follow">@else<meta name="robots" content="index,follow">@endif
 @unless(View::hasSection('noindex'))<link rel="alternate" hreflang="en" href="{{ url()->current() }}"><link rel="alternate" hreflang="id" href="{{ url()->current() }}?lang=id"><link rel="alternate" hreflang="x-default" href="{{ url()->current() }}">@endunless
 <meta property="og:locale" content="{{ app()->getLocale()==='id' ? 'id_ID' : 'en_US' }}"><meta property="og:type" content="website"><meta property="og:site_name" content="{{ $settings->get('company.name','PropertyME') }}"><meta property="og:title" content="{{ $metaTitle }}"><meta property="og:description" content="{{ $metaDescription }}"><meta property="og:url" content="{{ $canonical }}"><meta property="og:image" content="{{ $ogImage }}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{{ $metaTitle }}"><meta name="twitter:description" content="{{ $metaDescription }}"><meta name="twitter:image" content="{{ $ogImage }}">
-<link rel="icon" type="{{ $settings->get('company.favicon') ? 'image/webp' : 'image/svg+xml' }}" href="{{ $settings->get('company.favicon') ? \App\Support\Images::url($settings->get('company.favicon')) : asset('favicon.svg') }}">
+<link rel="icon" type="{{ $settings->get('company.favicon') ? 'image/webp' : 'image/png' }}" href="{{ $settings->get('company.favicon') ? \App\Support\Images::url($settings->get('company.favicon')) : asset('images/propertyme-logo.png') }}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://images.unsplash.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 @vite(['resources/css/app.css','resources/js/app.js'])
 <script type="application/ld+json">{!! json_encode($organization, JSON_HEX_TAG|JSON_HEX_AMP|JSON_HEX_APOS|JSON_HEX_QUOT|JSON_UNESCAPED_SLASHES) !!}</script>@stack('head')
