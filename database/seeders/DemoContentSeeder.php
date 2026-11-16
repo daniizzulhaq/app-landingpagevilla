@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\{DB, Storage};
 use Ramsey\Uuid\Uuid;
 
-/** Explicitly requested local preview data; never called by DatabaseSeeder. */
+/** Optional preview data; never called by DatabaseSeeder. */
 class DemoContentSeeder extends Seeder
 {
     private function media(string $asset, string $context): string
@@ -21,8 +21,8 @@ class DemoContentSeeder extends Seeder
 
     public function run(): void
     {
-        if (! app()->environment(['local', 'testing'])) {
-            throw new \RuntimeException('Demo content can only be installed in local/testing environments.');
+        if (! \App\Support\PublicContent::demoEnabled()) {
+            throw new \RuntimeException('Demo content requires local/testing or DEMO_CONTENT_ENABLED=true on a hosted preview.');
         }
         $this->call(DatabaseSeeder::class);
 

@@ -66,7 +66,7 @@ Seeder demo tidak dipanggil oleh seeder default. Untuk menambah contoh pada inst
 php artisan db:seed --class=DemoContentSeeder
 ```
 
-Seeder hanya menerima environment `local`/`testing`, mempertahankan edit admin dan tidak menggandakan data saat dijalankan lagi. Listing serta portfolio demo tidak masuk sitemap, tidak memiliki schema properti, dan tidak ditampilkan publik saat `APP_ENV=production`. Akun demo juga ditolak pada login dan Gate admin produksi. Buat akun dan listing riil sebelum peluncuran.
+Seeder menerima environment `local`/`testing` atau hosting preview yang mengaktifkan `DEMO_CONTENT_ENABLED=true`, mempertahankan edit admin dan tidak menggandakan data saat dijalankan lagi. Listing serta portfolio demo tidak masuk sitemap dan tidak memiliki schema properti. Pada produksi data demo tersembunyi secara default; lihat [panduan preview hosting](docs/DEPLOYMENT.md#data-villa-contoh-di-hosting) untuk mengisi dan menampilkannya secara eksplisit. Akun demo tetap ditolak pada login dan Gate admin produksi. Buat akun dan listing riil sebelum peluncuran.
 
 Hero memakai tab Buy/Sell/Rent/Management dan pencarian database. Bagian featured memiliki filter For sale/For rent serta All/Leasehold/Freehold/Land. Kartu katalog menampilkan cover, harga, badge ownership/development, spesifikasi, dan carousel foto. Tombol berbagi menggunakan native share atau menyalin link; tombol hati menyimpan pilihan di `localStorage` browser tanpa akun pelanggan.
 

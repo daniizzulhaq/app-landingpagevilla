@@ -62,6 +62,7 @@ class DemoPreviewTest extends PropertymeTestCase
 
     public function test_demo_properties_portfolio_and_reviews_are_hidden_in_production(): void
     {
+        config(['propertyme.demo_content_enabled'=>false]);
         Storage::fake('public'); $this->seed(DemoContentSeeder::class); $property=Property::first(); $project=Portfolio::first();
         $this->app['env']='production';
         $this->assertSame(0,Property::published()->count()); $this->assertSame(0,Portfolio::published()->count());
@@ -71,7 +72,39 @@ class DemoPreviewTest extends PropertymeTestCase
 
     public function test_demo_seeder_refuses_production(): void
     {
+        config(['propertyme.demo_content_enabled'=>false]);
         $this->app['env']='production'; $this->expectException(\RuntimeException::class); $this->expectExceptionMessage('local/testing');
         (new DemoContentSeeder)->run();
+    }
+
+    public function test_hosted_preview_can_install_and_display_demo_content_without_overwriting_edits(): void
+    {
+        Storage::fake('public');
+        $this->app['env']='production';
+        config(['propertyme.demo_content_enabled'=>true]);
+        $this->artisan('db:seed',['--class'=>DemoContentSeeder::class,'--force'=>true])->assertExitCode(0);
+        $property=Property::with('images')->first(); $project=Portfolio::first();
+        $property->update(['title'=>'Edited hosted villa']);
+        $this->artisan('db:seed',['--class'=>DemoContentSeeder::class,'--force'=>true])->assertExitCode(0);
+        $this->assertDatabaseCount('properties',12);
+        $this->assertSame(12,Property::published()->count());
+        $this->assertSame(6,Portfolio::published()->count());
+        $this->assertSame('Edited hosted villa',$property->fresh()->title);
+        foreach ($property->images as $image) Storage::disk('public')->assertExists($image->image_path);
+        $this->get('/properties')->assertOk()->assertSee('Edited hosted villa')->assertSee('Demo content.')->assertSee('noindex,follow');
+        $this->get('/properties/'.$property->slug)->assertOk()->assertSee('AI-generated')->assertDontSee('"@type":"House"',false);
+        $this->get('/portfolio/'.$project->slug)->assertOk();
+        $this->get('/sitemap.xml')->assertOk()->assertDontSee('/properties/demo-')->assertDontSee('/portfolio/demo-');
+
+        $user=new User; $user->forceFill(['name'=>'Local Admin','email'=>'admin@propertyme.test','password'=>Hash::make('password'),'is_demo'=>true])->save();
+        $this->withoutMiddleware([VerifyCsrfToken::class,\Illuminate\Foundation\Http\Middleware\ValidateCsrfToken::class]);
+        $this->post('/admin/login',['email'=>$user->email,'password'=>'password'])->assertSessionHasErrors('email');
+        $this->assertGuest();
+
+        config(['propertyme.demo_content_enabled'=>false]);
+        $this->assertSame(0,Property::published()->count());
+        $this->assertSame(0,Portfolio::published()->count());
+        $this->assertDatabaseCount('properties',12);
+        $this->get('/properties/'.$property->slug)->assertNotFound();
     }
 }

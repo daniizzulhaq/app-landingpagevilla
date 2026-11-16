@@ -4,6 +4,11 @@ namespace App\Support;
 
 class PublicContent
 {
+    public static function demoEnabled(): bool
+    {
+        return app()->environment(['local', 'testing']) || config('propertyme.demo_content_enabled', false);
+    }
+
     public static function description($record): string
     {
         $value = $record->description ?? '';

@@ -20,7 +20,7 @@ class Property extends ContentModel
     public function amenities() { return $this->belongsToMany(Amenity::class); }
     public function images() { return $this->hasMany(PropertyImage::class)->orderByDesc('is_primary')->orderBy('sort_order')->orderBy('id'); }
     public function publicPrefix(): string { return '/properties'; }
-    public function scopePublished($query) { return $query->where('publication_status', 'published')->whereNotNull('published_at')->where('published_at', '<=', now())->where('status', '!=', 'inactive')->when(! app()->environment(['local', 'testing']), fn ($q) => $q->where('is_demo', false)); }
+    public function scopePublished($query) { return $query->where('publication_status', 'published')->whereNotNull('published_at')->where('published_at', '<=', now())->where('status', '!=', 'inactive')->when(! \App\Support\PublicContent::demoEnabled(), fn ($q) => $q->where('is_demo', false)); }
     public function getCoverUrlAttribute(): string { return $this->images->first() ? Storage::disk('public')->url($this->images->first()->image_path) : asset('images/architecture.svg'); }
     public function getFormattedPriceAttribute(): string
     {
