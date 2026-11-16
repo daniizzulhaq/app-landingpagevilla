@@ -1,0 +1,1253 @@
+{
+    "format": 1,
+    "references": {
+        "property_types": [
+            {
+                "id": 1,
+                "name": "Villa",
+                "slug": "villa",
+                "created_at": "2026-11-02 14:36:49",
+                "updated_at": "2026-11-02 14:36:49"
+            },
+            {
+                "id": 2,
+                "name": "Land",
+                "slug": "land",
+                "created_at": "2026-11-02 14:36:49",
+                "updated_at": "2026-11-02 14:36:49"
+            },
+            {
+                "id": 3,
+                "name": "Apartment",
+                "slug": "apartment",
+                "created_at": "2026-11-02 14:36:49",
+                "updated_at": "2026-11-02 14:36:49"
+            }
+        ],
+        "locations": [
+            {
+                "id": 1,
+                "name": "Canggu",
+                "slug": "canggu",
+                "province": "Bali",
+                "created_at": "2026-11-02 14:36:49",
+                "updated_at": "2026-11-02 14:36:49"
+            },
+            {
+                "id": 2,
+                "name": "Seminyak",
+                "slug": "seminyak",
+                "province": "Bali",
+                "created_at": "2026-11-02 14:36:49",
+                "updated_at": "2026-11-02 14:36:49"
+            },
+            {
+                "id": 3,
+                "name": "Ubud",
+                "slug": "ubud",
+                "province": "Bali",
+                "created_at": "2026-11-02 14:36:49",
+                "updated_at": "2026-11-02 14:36:49"
+            },
+            {
+                "id": 4,
+                "name": "Uluwatu",
+                "slug": "uluwatu",
+                "province": "Bali",
+                "created_at": "2026-11-02 14:36:49",
+                "updated_at": "2026-11-02 14:36:49"
+            },
+            {
+                "id": 6,
+                "name": "Jimbaran",
+                "slug": "jimbaran",
+                "province": "Bali",
+                "created_at": "2026-11-02 14:36:49",
+                "updated_at": "2026-11-02 14:36:49"
+            },
+            {
+                "id": 7,
+                "name": "Pererenan",
+                "slug": "pererenan",
+                "province": "Bali",
+                "created_at": "2026-11-02 14:36:49",
+                "updated_at": "2026-11-02 14:36:49"
+            },
+            {
+                "id": 8,
+                "name": "Umalas",
+                "slug": "umalas",
+                "province": "Bali",
+                "created_at": "2026-11-02 14:36:49",
+                "updated_at": "2026-11-02 14:36:49"
+            }
+        ],
+        "amenities": [
+            {
+                "id": 1,
+                "name": "Swimming pool",
+                "icon": null,
+                "created_at": "2026-11-02 14:36:49",
+                "updated_at": "2026-11-02 14:36:49"
+            },
+            {
+                "id": 2,
+                "name": "WiFi",
+                "icon": null,
+                "created_at": "2026-11-02 14:36:49",
+                "updated_at": "2026-11-02 14:36:49"
+            },
+            {
+                "id": 3,
+                "name": "Parking",
+                "icon": null,
+                "created_at": "2026-11-02 14:36:49",
+                "updated_at": "2026-11-02 14:36:49"
+            },
+            {
+                "id": 4,
+                "name": "Air conditioning",
+                "icon": null,
+                "created_at": "2026-11-02 14:36:49",
+                "updated_at": "2026-11-02 14:36:49"
+            },
+            {
+                "id": 5,
+                "name": "Kitchen",
+                "icon": null,
+                "created_at": "2026-11-02 14:36:49",
+                "updated_at": "2026-11-02 14:36:49"
+            },
+            {
+                "id": 6,
+                "name": "Garden",
+                "icon": null,
+                "created_at": "2026-11-02 14:36:49",
+                "updated_at": "2026-11-02 14:36:49"
+            },
+            {
+                "id": 7,
+                "name": "Security",
+                "icon": null,
+                "created_at": "2026-11-02 14:36:49",
+                "updated_at": "2026-11-02 14:36:49"
+            }
+        ]
+    },
+    "properties": [
+        {
+            "property": {
+                "id": 1,
+                "property_code": "DEMO-PM-001",
+                "title": "Palm Courtyard Villa",
+                "slug": "demo-palm-courtyard-villa",
+                "property_type_id": 1,
+                "location_id": 1,
+                "listing_type": "sale",
+                "short_description": "Demo listing with AI-generated architectural illustrations. All prices and specifications are fictional.",
+                "description": "DEMO PROPERTY — for website preview only. This is not a real property offered by PropertyME. Images are AI-generated illustrations; location, price, availability, ownership and specifications are examples.\n\nA contemporary tropical design concept with natural materials, open living spaces and a considered connection between indoor and outdoor areas. Explore the gallery and specifications to preview the property browsing experience.\n\nFor a genuine property inquiry, replace this example with verified listing details and approved photography through the admin CMS. No investment return or rental availability is represented by this demonstration.",
+                "price": "4850000000.00",
+                "currency": "IDR",
+                "price_unit": null,
+                "show_price": 1,
+                "bedrooms": 2,
+                "bathrooms": 3,
+                "land_area": "220.00",
+                "building_area": "165.00",
+                "floors": 2,
+                "max_guests": null,
+                "furnishing": "Illustrative fully furnished layout",
+                "ownership_type": "Leasehold",
+                "location_description": null,
+                "latitude": null,
+                "longitude": null,
+                "show_exact_location": 0,
+                "status": "available",
+                "publication_status": "published",
+                "is_featured": 1,
+                "seo_title": "Palm Courtyard Villa — Demo Listing | PropertyME",
+                "meta_description": "Illustrative demo property. Not a real listing. All images, specifications and prices are examples.",
+                "canonical_url": null,
+                "published_at": "2026-11-02 15:26:46",
+                "created_at": "2026-11-02 15:27:46",
+                "updated_at": "2026-11-02 15:27:46",
+                "deleted_at": null,
+                "is_demo": 1,
+                "development_status": "completed",
+                "year_built": 2026,
+                "lease_years": 28,
+                "handover": null
+            },
+            "images": [
+                {
+                    "id": 1,
+                    "property_id": 1,
+                    "image_path": "images/9fb4b183-8c34-5b2e-99b1-6d23bdab39f3.webp",
+                    "alt_text": "AI-generated illustration for Palm Courtyard Villa — demo only",
+                    "is_primary": 1,
+                    "sort_order": 0,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                },
+                {
+                    "id": 2,
+                    "property_id": 1,
+                    "image_path": "images/b9403ecf-b257-557c-ba3c-88685a9bd655.webp",
+                    "alt_text": "AI-generated illustration for Palm Courtyard Villa — demo only",
+                    "is_primary": 0,
+                    "sort_order": 1,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                },
+                {
+                    "id": 3,
+                    "property_id": 1,
+                    "image_path": "images/49add7e3-f3e5-5401-a550-8516af7f2b1f.webp",
+                    "alt_text": "AI-generated illustration for Palm Courtyard Villa — demo only",
+                    "is_primary": 0,
+                    "sort_order": 2,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                }
+            ],
+            "amenities": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "translations": [
+                {
+                    "id": 22,
+                    "translatable_type": "App\\Models\\Property",
+                    "translatable_id": 1,
+                    "locale": "id",
+                    "fields": "{\"short_description\":\"Pilihan desain tropis dengan material alami dan hubungan antara ruang dalam dan luar.\",\"description\":\"Konsep hunian tropis dengan material alami, ruang keluarga yang terbuka, serta hubungan yang terencana antara interior dan area luar. Jelajahi galeri serta spesifikasi untuk memahami tata ruang dan fasilitasnya.\",\"furnishing\":\"Tata ruang dengan perabot lengkap\"}",
+                    "created_at": "2026-11-02 16:35:53",
+                    "updated_at": "2026-11-02 16:35:53"
+                }
+            ]
+        },
+        {
+            "property": {
+                "id": 2,
+                "property_code": "DEMO-PM-002",
+                "title": "Ocean Horizon Residence",
+                "slug": "demo-ocean-horizon-residence",
+                "property_type_id": 1,
+                "location_id": 4,
+                "listing_type": "sale",
+                "short_description": "Demo listing with AI-generated architectural illustrations. All prices and specifications are fictional.",
+                "description": "DEMO PROPERTY — for website preview only. This is not a real property offered by PropertyME. Images are AI-generated illustrations; location, price, availability, ownership and specifications are examples.\n\nA contemporary tropical design concept with natural materials, open living spaces and a considered connection between indoor and outdoor areas. Explore the gallery and specifications to preview the property browsing experience.\n\nFor a genuine property inquiry, replace this example with verified listing details and approved photography through the admin CMS. No investment return or rental availability is represented by this demonstration.",
+                "price": "12800000000.00",
+                "currency": "IDR",
+                "price_unit": null,
+                "show_price": 1,
+                "bedrooms": 4,
+                "bathrooms": 5,
+                "land_area": "650.00",
+                "building_area": "420.00",
+                "floors": 2,
+                "max_guests": null,
+                "furnishing": "Illustrative fully furnished layout",
+                "ownership_type": "Freehold",
+                "location_description": null,
+                "latitude": null,
+                "longitude": null,
+                "show_exact_location": 0,
+                "status": "available",
+                "publication_status": "published",
+                "is_featured": 1,
+                "seo_title": "Ocean Horizon Residence — Demo Listing | PropertyME",
+                "meta_description": "Illustrative demo property. Not a real listing. All images, specifications and prices are examples.",
+                "canonical_url": null,
+                "published_at": "2026-11-02 15:25:46",
+                "created_at": "2026-11-02 15:27:46",
+                "updated_at": "2026-11-02 15:27:46",
+                "deleted_at": null,
+                "is_demo": 1,
+                "development_status": "completed",
+                "year_built": 2025,
+                "lease_years": null,
+                "handover": null
+            },
+            "images": [
+                {
+                    "id": 4,
+                    "property_id": 2,
+                    "image_path": "images/e63bf511-297a-5d89-91d6-435ed6118da6.webp",
+                    "alt_text": "AI-generated illustration for Ocean Horizon Residence — demo only",
+                    "is_primary": 1,
+                    "sort_order": 0,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                },
+                {
+                    "id": 5,
+                    "property_id": 2,
+                    "image_path": "images/58e9fdc7-7fc2-5131-918d-5f7cb9e9e2c8.webp",
+                    "alt_text": "AI-generated illustration for Ocean Horizon Residence — demo only",
+                    "is_primary": 0,
+                    "sort_order": 1,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                },
+                {
+                    "id": 6,
+                    "property_id": 2,
+                    "image_path": "images/47117087-a5c4-5f23-b332-7b4798d0c66c.webp",
+                    "alt_text": "AI-generated illustration for Ocean Horizon Residence — demo only",
+                    "is_primary": 0,
+                    "sort_order": 2,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                }
+            ],
+            "amenities": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "translations": [
+                {
+                    "id": 23,
+                    "translatable_type": "App\\Models\\Property",
+                    "translatable_id": 2,
+                    "locale": "id",
+                    "fields": "{\"short_description\":\"Pilihan desain tropis dengan material alami dan hubungan antara ruang dalam dan luar.\",\"description\":\"Konsep hunian tropis dengan material alami, ruang keluarga yang terbuka, serta hubungan yang terencana antara interior dan area luar. Jelajahi galeri serta spesifikasi untuk memahami tata ruang dan fasilitasnya.\",\"furnishing\":\"Tata ruang dengan perabot lengkap\"}",
+                    "created_at": "2026-11-02 16:35:53",
+                    "updated_at": "2026-11-02 16:35:53"
+                }
+            ]
+        },
+        {
+            "property": {
+                "id": 3,
+                "property_code": "DEMO-PM-003",
+                "title": "Jungle Pavilion Retreat",
+                "slug": "demo-jungle-pavilion-retreat",
+                "property_type_id": 1,
+                "location_id": 3,
+                "listing_type": "sale",
+                "short_description": "Demo listing with AI-generated architectural illustrations. All prices and specifications are fictional.",
+                "description": "DEMO PROPERTY — for website preview only. This is not a real property offered by PropertyME. Images are AI-generated illustrations; location, price, availability, ownership and specifications are examples.\n\nA contemporary tropical design concept with natural materials, open living spaces and a considered connection between indoor and outdoor areas. Explore the gallery and specifications to preview the property browsing experience.\n\nFor a genuine property inquiry, replace this example with verified listing details and approved photography through the admin CMS. No investment return or rental availability is represented by this demonstration.",
+                "price": "6250000000.00",
+                "currency": "IDR",
+                "price_unit": null,
+                "show_price": 1,
+                "bedrooms": 3,
+                "bathrooms": 3,
+                "land_area": "480.00",
+                "building_area": "280.00",
+                "floors": 2,
+                "max_guests": null,
+                "furnishing": "Illustrative fully furnished layout",
+                "ownership_type": "Leasehold",
+                "location_description": null,
+                "latitude": null,
+                "longitude": null,
+                "show_exact_location": 0,
+                "status": "available",
+                "publication_status": "published",
+                "is_featured": 1,
+                "seo_title": "Jungle Pavilion Retreat — Demo Listing | PropertyME",
+                "meta_description": "Illustrative demo property. Not a real listing. All images, specifications and prices are examples.",
+                "canonical_url": null,
+                "published_at": "2026-11-02 15:24:46",
+                "created_at": "2026-11-02 15:27:46",
+                "updated_at": "2026-11-02 15:27:46",
+                "deleted_at": null,
+                "is_demo": 1,
+                "development_status": "off-plan",
+                "year_built": null,
+                "lease_years": 30,
+                "handover": "Q4 2027"
+            },
+            "images": [
+                {
+                    "id": 7,
+                    "property_id": 3,
+                    "image_path": "images/3037f7ad-8350-516b-ab20-08d521c7ec0f.webp",
+                    "alt_text": "AI-generated illustration for Jungle Pavilion Retreat — demo only",
+                    "is_primary": 1,
+                    "sort_order": 0,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                },
+                {
+                    "id": 8,
+                    "property_id": 3,
+                    "image_path": "images/fd5c85fc-5d77-5a39-9ffa-db306ba9ef90.webp",
+                    "alt_text": "AI-generated illustration for Jungle Pavilion Retreat — demo only",
+                    "is_primary": 0,
+                    "sort_order": 1,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                },
+                {
+                    "id": 9,
+                    "property_id": 3,
+                    "image_path": "images/9bc84686-cd93-5ebd-a5d2-8a8fecbf579c.webp",
+                    "alt_text": "AI-generated illustration for Jungle Pavilion Retreat — demo only",
+                    "is_primary": 0,
+                    "sort_order": 2,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                }
+            ],
+            "amenities": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "translations": [
+                {
+                    "id": 24,
+                    "translatable_type": "App\\Models\\Property",
+                    "translatable_id": 3,
+                    "locale": "id",
+                    "fields": "{\"short_description\":\"Pilihan desain tropis dengan material alami dan hubungan antara ruang dalam dan luar.\",\"description\":\"Konsep hunian tropis dengan material alami, ruang keluarga yang terbuka, serta hubungan yang terencana antara interior dan area luar. Jelajahi galeri serta spesifikasi untuk memahami tata ruang dan fasilitasnya.\",\"furnishing\":\"Tata ruang dengan perabot lengkap\"}",
+                    "created_at": "2026-11-02 16:35:53",
+                    "updated_at": "2026-11-02 16:35:53"
+                }
+            ]
+        },
+        {
+            "property": {
+                "id": 4,
+                "property_code": "DEMO-PM-004",
+                "title": "The Ivory Loft",
+                "slug": "demo-the-ivory-loft",
+                "property_type_id": 3,
+                "location_id": 2,
+                "listing_type": "sale",
+                "short_description": "Demo listing with AI-generated architectural illustrations. All prices and specifications are fictional.",
+                "description": "DEMO PROPERTY — for website preview only. This is not a real property offered by PropertyME. Images are AI-generated illustrations; location, price, availability, ownership and specifications are examples.\n\nA contemporary tropical design concept with natural materials, open living spaces and a considered connection between indoor and outdoor areas. Explore the gallery and specifications to preview the property browsing experience.\n\nFor a genuine property inquiry, replace this example with verified listing details and approved photography through the admin CMS. No investment return or rental availability is represented by this demonstration.",
+                "price": "3450000000.00",
+                "currency": "IDR",
+                "price_unit": null,
+                "show_price": 1,
+                "bedrooms": 2,
+                "bathrooms": 2,
+                "land_area": null,
+                "building_area": "120.00",
+                "floors": 2,
+                "max_guests": null,
+                "furnishing": "Illustrative fully furnished layout",
+                "ownership_type": "Leasehold",
+                "location_description": null,
+                "latitude": null,
+                "longitude": null,
+                "show_exact_location": 0,
+                "status": "available",
+                "publication_status": "published",
+                "is_featured": 1,
+                "seo_title": "The Ivory Loft — Demo Listing | PropertyME",
+                "meta_description": "Illustrative demo property. Not a real listing. All images, specifications and prices are examples.",
+                "canonical_url": null,
+                "published_at": "2026-11-02 15:23:46",
+                "created_at": "2026-11-02 15:27:46",
+                "updated_at": "2026-11-02 15:27:46",
+                "deleted_at": null,
+                "is_demo": 1,
+                "development_status": "completed",
+                "year_built": 2026,
+                "lease_years": 25,
+                "handover": null
+            },
+            "images": [
+                {
+                    "id": 10,
+                    "property_id": 4,
+                    "image_path": "images/42729010-fff9-5186-aca7-765093a0f9ea.webp",
+                    "alt_text": "AI-generated illustration for The Ivory Loft — demo only",
+                    "is_primary": 1,
+                    "sort_order": 0,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                },
+                {
+                    "id": 11,
+                    "property_id": 4,
+                    "image_path": "images/c574ec0c-8c51-5397-ab82-ffe77f5fea02.webp",
+                    "alt_text": "AI-generated illustration for The Ivory Loft — demo only",
+                    "is_primary": 0,
+                    "sort_order": 1,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                }
+            ],
+            "amenities": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "translations": [
+                {
+                    "id": 25,
+                    "translatable_type": "App\\Models\\Property",
+                    "translatable_id": 4,
+                    "locale": "id",
+                    "fields": "{\"short_description\":\"Pilihan desain tropis dengan material alami dan hubungan antara ruang dalam dan luar.\",\"description\":\"Konsep hunian tropis dengan material alami, ruang keluarga yang terbuka, serta hubungan yang terencana antara interior dan area luar. Jelajahi galeri serta spesifikasi untuk memahami tata ruang dan fasilitasnya.\",\"furnishing\":\"Tata ruang dengan perabot lengkap\"}",
+                    "created_at": "2026-11-02 16:35:53",
+                    "updated_at": "2026-11-02 16:35:53"
+                }
+            ]
+        },
+        {
+            "property": {
+                "id": 5,
+                "property_code": "DEMO-PM-005",
+                "title": "Pererenan Garden House",
+                "slug": "demo-pererenan-garden-house",
+                "property_type_id": 1,
+                "location_id": 7,
+                "listing_type": "sale",
+                "short_description": "Demo listing with AI-generated architectural illustrations. All prices and specifications are fictional.",
+                "description": "DEMO PROPERTY — for website preview only. This is not a real property offered by PropertyME. Images are AI-generated illustrations; location, price, availability, ownership and specifications are examples.\n\nA contemporary tropical design concept with natural materials, open living spaces and a considered connection between indoor and outdoor areas. Explore the gallery and specifications to preview the property browsing experience.\n\nFor a genuine property inquiry, replace this example with verified listing details and approved photography through the admin CMS. No investment return or rental availability is represented by this demonstration.",
+                "price": "7150000000.00",
+                "currency": "IDR",
+                "price_unit": null,
+                "show_price": 1,
+                "bedrooms": 3,
+                "bathrooms": 4,
+                "land_area": "320.00",
+                "building_area": "210.00",
+                "floors": 2,
+                "max_guests": null,
+                "furnishing": "Illustrative fully furnished layout",
+                "ownership_type": "Freehold",
+                "location_description": null,
+                "latitude": null,
+                "longitude": null,
+                "show_exact_location": 0,
+                "status": "available",
+                "publication_status": "published",
+                "is_featured": 1,
+                "seo_title": "Pererenan Garden House — Demo Listing | PropertyME",
+                "meta_description": "Illustrative demo property. Not a real listing. All images, specifications and prices are examples.",
+                "canonical_url": null,
+                "published_at": "2026-11-02 15:22:46",
+                "created_at": "2026-11-02 15:27:46",
+                "updated_at": "2026-11-02 15:27:46",
+                "deleted_at": null,
+                "is_demo": 1,
+                "development_status": "under-construction",
+                "year_built": null,
+                "lease_years": null,
+                "handover": "Q2 2027"
+            },
+            "images": [
+                {
+                    "id": 12,
+                    "property_id": 5,
+                    "image_path": "images/c02e8962-6f80-57e4-9592-33d772c82f9c.webp",
+                    "alt_text": "AI-generated illustration for Pererenan Garden House — demo only",
+                    "is_primary": 1,
+                    "sort_order": 0,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                },
+                {
+                    "id": 13,
+                    "property_id": 5,
+                    "image_path": "images/c1520830-dd32-579a-ae0a-60b0875ab2bb.webp",
+                    "alt_text": "AI-generated illustration for Pererenan Garden House — demo only",
+                    "is_primary": 0,
+                    "sort_order": 1,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                },
+                {
+                    "id": 14,
+                    "property_id": 5,
+                    "image_path": "images/f1a3e717-c85d-510b-87b1-f89f0c8641b4.webp",
+                    "alt_text": "AI-generated illustration for Pererenan Garden House — demo only",
+                    "is_primary": 0,
+                    "sort_order": 2,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                }
+            ],
+            "amenities": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "translations": [
+                {
+                    "id": 26,
+                    "translatable_type": "App\\Models\\Property",
+                    "translatable_id": 5,
+                    "locale": "id",
+                    "fields": "{\"short_description\":\"Pilihan desain tropis dengan material alami dan hubungan antara ruang dalam dan luar.\",\"description\":\"Konsep hunian tropis dengan material alami, ruang keluarga yang terbuka, serta hubungan yang terencana antara interior dan area luar. Jelajahi galeri serta spesifikasi untuk memahami tata ruang dan fasilitasnya.\",\"furnishing\":\"Tata ruang dengan perabot lengkap\"}",
+                    "created_at": "2026-11-02 16:35:53",
+                    "updated_at": "2026-11-02 16:35:53"
+                }
+            ]
+        },
+        {
+            "property": {
+                "id": 6,
+                "property_code": "DEMO-PM-006",
+                "title": "Sunrise Hillside Land",
+                "slug": "demo-sunrise-hillside-land",
+                "property_type_id": 2,
+                "location_id": 3,
+                "listing_type": "sale",
+                "short_description": "Demo listing with AI-generated architectural illustrations. All prices and specifications are fictional.",
+                "description": "DEMO PROPERTY — for website preview only. This is not a real property offered by PropertyME. Images are AI-generated illustrations; location, price, availability, ownership and specifications are examples.\n\nAn illustrative landscape concept with open green space, tropical planting and a rural setting. Use this example to explore land listing specifications and property inquiries.\n\nFor a genuine property inquiry, replace this example with verified listing details and approved photography through the admin CMS. No investment return or rental availability is represented by this demonstration.",
+                "price": "3600000000.00",
+                "currency": "IDR",
+                "price_unit": null,
+                "show_price": 1,
+                "bedrooms": null,
+                "bathrooms": null,
+                "land_area": "1800.00",
+                "building_area": null,
+                "floors": null,
+                "max_guests": null,
+                "furnishing": null,
+                "ownership_type": "Freehold",
+                "location_description": null,
+                "latitude": null,
+                "longitude": null,
+                "show_exact_location": 0,
+                "status": "available",
+                "publication_status": "published",
+                "is_featured": 1,
+                "seo_title": "Sunrise Hillside Land — Demo Listing | PropertyME",
+                "meta_description": "Illustrative demo property. Not a real listing. All images, specifications and prices are examples.",
+                "canonical_url": null,
+                "published_at": "2026-11-02 15:21:46",
+                "created_at": "2026-11-02 15:27:46",
+                "updated_at": "2026-11-02 15:27:46",
+                "deleted_at": null,
+                "is_demo": 1,
+                "development_status": null,
+                "year_built": null,
+                "lease_years": null,
+                "handover": null
+            },
+            "images": [
+                {
+                    "id": 15,
+                    "property_id": 6,
+                    "image_path": "images/103dacfb-b420-51f3-a83b-95e5f26aa515.webp",
+                    "alt_text": "AI-generated illustration for Sunrise Hillside Land — demo only",
+                    "is_primary": 1,
+                    "sort_order": 0,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                }
+            ],
+            "amenities": [
+                3,
+                6
+            ],
+            "translations": [
+                {
+                    "id": 27,
+                    "translatable_type": "App\\Models\\Property",
+                    "translatable_id": 6,
+                    "locale": "id",
+                    "fields": "{\"short_description\":\"Pilihan desain tropis dengan material alami dan hubungan antara ruang dalam dan luar.\",\"description\":\"Lanskap hijau dengan vegetasi tropis dan suasana pedesaan. Informasi luas, lokasi, dan kepemilikan dapat didiskusikan lebih lanjut bersama tim.\"}",
+                    "created_at": "2026-11-02 16:35:53",
+                    "updated_at": "2026-11-02 16:35:53"
+                }
+            ]
+        },
+        {
+            "property": {
+                "id": 7,
+                "property_code": "DEMO-PM-007",
+                "title": "Tropical Courtyard Stay",
+                "slug": "demo-tropical-courtyard-stay",
+                "property_type_id": 1,
+                "location_id": 1,
+                "listing_type": "rent",
+                "short_description": "Demo listing with AI-generated architectural illustrations. All prices and specifications are fictional.",
+                "description": "DEMO PROPERTY — for website preview only. This is not a real property offered by PropertyME. Images are AI-generated illustrations; location, price, availability, ownership and specifications are examples.\n\nA contemporary tropical design concept with natural materials, open living spaces and a considered connection between indoor and outdoor areas. Explore the gallery and specifications to preview the property browsing experience.\n\nFor a genuine property inquiry, replace this example with verified listing details and approved photography through the admin CMS. No investment return or rental availability is represented by this demonstration.",
+                "price": "3200000.00",
+                "currency": "IDR",
+                "price_unit": "night",
+                "show_price": 1,
+                "bedrooms": 2,
+                "bathrooms": 3,
+                "land_area": "220.00",
+                "building_area": "165.00",
+                "floors": 2,
+                "max_guests": 4,
+                "furnishing": "Illustrative fully furnished layout",
+                "ownership_type": "Leasehold",
+                "location_description": null,
+                "latitude": null,
+                "longitude": null,
+                "show_exact_location": 0,
+                "status": "available",
+                "publication_status": "published",
+                "is_featured": 1,
+                "seo_title": "Tropical Courtyard Stay — Demo Listing | PropertyME",
+                "meta_description": "Illustrative demo property. Not a real listing. All images, specifications and prices are examples.",
+                "canonical_url": null,
+                "published_at": "2026-11-02 15:20:46",
+                "created_at": "2026-11-02 15:27:46",
+                "updated_at": "2026-11-02 15:27:46",
+                "deleted_at": null,
+                "is_demo": 1,
+                "development_status": "completed",
+                "year_built": 2026,
+                "lease_years": 28,
+                "handover": null
+            },
+            "images": [
+                {
+                    "id": 16,
+                    "property_id": 7,
+                    "image_path": "images/1da5df80-2fb0-5d46-accb-d8cee38880a9.webp",
+                    "alt_text": "AI-generated illustration for Tropical Courtyard Stay — demo only",
+                    "is_primary": 1,
+                    "sort_order": 0,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                },
+                {
+                    "id": 17,
+                    "property_id": 7,
+                    "image_path": "images/39b46bc9-85a1-5b9c-bf5e-1c195b335acd.webp",
+                    "alt_text": "AI-generated illustration for Tropical Courtyard Stay — demo only",
+                    "is_primary": 0,
+                    "sort_order": 1,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                },
+                {
+                    "id": 18,
+                    "property_id": 7,
+                    "image_path": "images/73b3d2ed-fd66-52bd-b9f1-3bfe5e45ba26.webp",
+                    "alt_text": "AI-generated illustration for Tropical Courtyard Stay — demo only",
+                    "is_primary": 0,
+                    "sort_order": 2,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                }
+            ],
+            "amenities": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "translations": [
+                {
+                    "id": 28,
+                    "translatable_type": "App\\Models\\Property",
+                    "translatable_id": 7,
+                    "locale": "id",
+                    "fields": "{\"short_description\":\"Pilihan desain tropis dengan material alami dan hubungan antara ruang dalam dan luar.\",\"description\":\"Konsep hunian tropis dengan material alami, ruang keluarga yang terbuka, serta hubungan yang terencana antara interior dan area luar. Jelajahi galeri serta spesifikasi untuk memahami tata ruang dan fasilitasnya.\",\"furnishing\":\"Tata ruang dengan perabot lengkap\"}",
+                    "created_at": "2026-11-02 16:35:53",
+                    "updated_at": "2026-11-02 16:35:53"
+                }
+            ]
+        },
+        {
+            "property": {
+                "id": 8,
+                "property_code": "DEMO-PM-008",
+                "title": "Ubud Forest Hideaway",
+                "slug": "demo-ubud-forest-hideaway",
+                "property_type_id": 1,
+                "location_id": 3,
+                "listing_type": "rent",
+                "short_description": "Demo listing with AI-generated architectural illustrations. All prices and specifications are fictional.",
+                "description": "DEMO PROPERTY — for website preview only. This is not a real property offered by PropertyME. Images are AI-generated illustrations; location, price, availability, ownership and specifications are examples.\n\nA contemporary tropical design concept with natural materials, open living spaces and a considered connection between indoor and outdoor areas. Explore the gallery and specifications to preview the property browsing experience.\n\nFor a genuine property inquiry, replace this example with verified listing details and approved photography through the admin CMS. No investment return or rental availability is represented by this demonstration.",
+                "price": "4500000.00",
+                "currency": "IDR",
+                "price_unit": "night",
+                "show_price": 1,
+                "bedrooms": 3,
+                "bathrooms": 3,
+                "land_area": "480.00",
+                "building_area": "280.00",
+                "floors": 2,
+                "max_guests": 6,
+                "furnishing": "Illustrative fully furnished layout",
+                "ownership_type": "Leasehold",
+                "location_description": null,
+                "latitude": null,
+                "longitude": null,
+                "show_exact_location": 0,
+                "status": "available",
+                "publication_status": "published",
+                "is_featured": 1,
+                "seo_title": "Ubud Forest Hideaway — Demo Listing | PropertyME",
+                "meta_description": "Illustrative demo property. Not a real listing. All images, specifications and prices are examples.",
+                "canonical_url": null,
+                "published_at": "2026-11-02 15:19:46",
+                "created_at": "2026-11-02 15:27:46",
+                "updated_at": "2026-11-02 15:27:46",
+                "deleted_at": null,
+                "is_demo": 1,
+                "development_status": "completed",
+                "year_built": 2025,
+                "lease_years": 25,
+                "handover": null
+            },
+            "images": [
+                {
+                    "id": 19,
+                    "property_id": 8,
+                    "image_path": "images/0b47a253-eeb2-5fce-9666-8bb6685f7a32.webp",
+                    "alt_text": "AI-generated illustration for Ubud Forest Hideaway — demo only",
+                    "is_primary": 1,
+                    "sort_order": 0,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                },
+                {
+                    "id": 20,
+                    "property_id": 8,
+                    "image_path": "images/39f71cc4-cd98-577e-add9-25aa32bd4a9a.webp",
+                    "alt_text": "AI-generated illustration for Ubud Forest Hideaway — demo only",
+                    "is_primary": 0,
+                    "sort_order": 1,
+                    "created_at": "2026-11-02 15:27:46",
+                    "updated_at": "2026-11-02 15:27:46"
+                },
+                {
+                    "id": 21,
+                    "property_id": 8,
+                    "image_path": "images/25c3ea1f-bf35-59ad-97e2-464fc4fc656f.webp",
+                    "alt_text": "AI-generated illustration for Ubud Forest Hideaway — demo only",
+                    "is_primary": 0,
+                    "sort_order": 2,
+                    "created_at": "2026-11-02 15:27:47",
+                    "updated_at": "2026-11-02 15:27:47"
+                }
+            ],
+            "amenities": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "translations": [
+                {
+                    "id": 29,
+                    "translatable_type": "App\\Models\\Property",
+                    "translatable_id": 8,
+                    "locale": "id",
+                    "fields": "{\"short_description\":\"Pilihan desain tropis dengan material alami dan hubungan antara ruang dalam dan luar.\",\"description\":\"Konsep hunian tropis dengan material alami, ruang keluarga yang terbuka, serta hubungan yang terencana antara interior dan area luar. Jelajahi galeri serta spesifikasi untuk memahami tata ruang dan fasilitasnya.\",\"furnishing\":\"Tata ruang dengan perabot lengkap\"}",
+                    "created_at": "2026-11-02 16:35:53",
+                    "updated_at": "2026-11-02 16:35:53"
+                }
+            ]
+        },
+        {
+            "property": {
+                "id": 9,
+                "property_code": "DEMO-PM-009",
+                "title": "Cliffside Ocean Villa",
+                "slug": "demo-cliffside-ocean-villa",
+                "property_type_id": 1,
+                "location_id": 4,
+                "listing_type": "rent",
+                "short_description": "Demo listing with AI-generated architectural illustrations. All prices and specifications are fictional.",
+                "description": "DEMO PROPERTY — for website preview only. This is not a real property offered by PropertyME. Images are AI-generated illustrations; location, price, availability, ownership and specifications are examples.\n\nA contemporary tropical design concept with natural materials, open living spaces and a considered connection between indoor and outdoor areas. Explore the gallery and specifications to preview the property browsing experience.\n\nFor a genuine property inquiry, replace this example with verified listing details and approved photography through the admin CMS. No investment return or rental availability is represented by this demonstration.",
+                "price": "8750000.00",
+                "currency": "IDR",
+                "price_unit": "night",
+                "show_price": 1,
+                "bedrooms": 4,
+                "bathrooms": 5,
+                "land_area": "650.00",
+                "building_area": "420.00",
+                "floors": 2,
+                "max_guests": 8,
+                "furnishing": "Illustrative fully furnished layout",
+                "ownership_type": "Freehold",
+                "location_description": null,
+                "latitude": null,
+                "longitude": null,
+                "show_exact_location": 0,
+                "status": "available",
+                "publication_status": "published",
+                "is_featured": 1,
+                "seo_title": "Cliffside Ocean Villa — Demo Listing | PropertyME",
+                "meta_description": "Illustrative demo property. Not a real listing. All images, specifications and prices are examples.",
+                "canonical_url": null,
+                "published_at": "2026-11-02 15:18:47",
+                "created_at": "2026-11-02 15:27:47",
+                "updated_at": "2026-11-02 15:27:47",
+                "deleted_at": null,
+                "is_demo": 1,
+                "development_status": "completed",
+                "year_built": 2026,
+                "lease_years": null,
+                "handover": null
+            },
+            "images": [
+                {
+                    "id": 22,
+                    "property_id": 9,
+                    "image_path": "images/a5e05b18-353a-5a55-a25d-640d155da0a0.webp",
+                    "alt_text": "AI-generated illustration for Cliffside Ocean Villa — demo only",
+                    "is_primary": 1,
+                    "sort_order": 0,
+                    "created_at": "2026-11-02 15:27:47",
+                    "updated_at": "2026-11-02 15:27:47"
+                },
+                {
+                    "id": 23,
+                    "property_id": 9,
+                    "image_path": "images/dc6b8219-512d-5a3b-9bd4-aebab8ad4e9d.webp",
+                    "alt_text": "AI-generated illustration for Cliffside Ocean Villa — demo only",
+                    "is_primary": 0,
+                    "sort_order": 1,
+                    "created_at": "2026-11-02 15:27:47",
+                    "updated_at": "2026-11-02 15:27:47"
+                },
+                {
+                    "id": 24,
+                    "property_id": 9,
+                    "image_path": "images/f99b591c-7c05-5c3d-b3ce-751d206e90f8.webp",
+                    "alt_text": "AI-generated illustration for Cliffside Ocean Villa — demo only",
+                    "is_primary": 0,
+                    "sort_order": 2,
+                    "created_at": "2026-11-02 15:27:47",
+                    "updated_at": "2026-11-02 15:27:47"
+                }
+            ],
+            "amenities": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "translations": [
+                {
+                    "id": 30,
+                    "translatable_type": "App\\Models\\Property",
+                    "translatable_id": 9,
+                    "locale": "id",
+                    "fields": "{\"short_description\":\"Pilihan desain tropis dengan material alami dan hubungan antara ruang dalam dan luar.\",\"description\":\"Konsep hunian tropis dengan material alami, ruang keluarga yang terbuka, serta hubungan yang terencana antara interior dan area luar. Jelajahi galeri serta spesifikasi untuk memahami tata ruang dan fasilitasnya.\",\"furnishing\":\"Tata ruang dengan perabot lengkap\"}",
+                    "created_at": "2026-11-02 16:35:53",
+                    "updated_at": "2026-11-02 16:35:53"
+                }
+            ]
+        },
+        {
+            "property": {
+                "id": 10,
+                "property_code": "DEMO-PM-010",
+                "title": "Seminyak Living Villa",
+                "slug": "demo-seminyak-living-villa",
+                "property_type_id": 1,
+                "location_id": 2,
+                "listing_type": "rent",
+                "short_description": "Demo listing with AI-generated architectural illustrations. All prices and specifications are fictional.",
+                "description": "DEMO PROPERTY — for website preview only. This is not a real property offered by PropertyME. Images are AI-generated illustrations; location, price, availability, ownership and specifications are examples.\n\nA contemporary tropical design concept with natural materials, open living spaces and a considered connection between indoor and outdoor areas. Explore the gallery and specifications to preview the property browsing experience.\n\nFor a genuine property inquiry, replace this example with verified listing details and approved photography through the admin CMS. No investment return or rental availability is represented by this demonstration.",
+                "price": "38000000.00",
+                "currency": "IDR",
+                "price_unit": "month",
+                "show_price": 1,
+                "bedrooms": 2,
+                "bathrooms": 2,
+                "land_area": "250.00",
+                "building_area": "180.00",
+                "floors": 2,
+                "max_guests": 4,
+                "furnishing": "Illustrative fully furnished layout",
+                "ownership_type": "Leasehold",
+                "location_description": null,
+                "latitude": null,
+                "longitude": null,
+                "show_exact_location": 0,
+                "status": "available",
+                "publication_status": "published",
+                "is_featured": 1,
+                "seo_title": "Seminyak Living Villa — Demo Listing | PropertyME",
+                "meta_description": "Illustrative demo property. Not a real listing. All images, specifications and prices are examples.",
+                "canonical_url": null,
+                "published_at": "2026-11-02 15:17:47",
+                "created_at": "2026-11-02 15:27:47",
+                "updated_at": "2026-11-02 15:27:47",
+                "deleted_at": null,
+                "is_demo": 1,
+                "development_status": "completed",
+                "year_built": 2025,
+                "lease_years": 25,
+                "handover": null
+            },
+            "images": [
+                {
+                    "id": 25,
+                    "property_id": 10,
+                    "image_path": "images/c0772e19-4e4a-5bcf-9618-207359a5c231.webp",
+                    "alt_text": "AI-generated illustration for Seminyak Living Villa — demo only",
+                    "is_primary": 1,
+                    "sort_order": 0,
+                    "created_at": "2026-11-02 15:27:47",
+                    "updated_at": "2026-11-02 15:27:47"
+                },
+                {
+                    "id": 26,
+                    "property_id": 10,
+                    "image_path": "images/28894949-8b0c-5d02-9ba6-faa55317277a.webp",
+                    "alt_text": "AI-generated illustration for Seminyak Living Villa — demo only",
+                    "is_primary": 0,
+                    "sort_order": 1,
+                    "created_at": "2026-11-02 15:27:47",
+                    "updated_at": "2026-11-02 15:27:47"
+                }
+            ],
+            "amenities": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "translations": [
+                {
+                    "id": 31,
+                    "translatable_type": "App\\Models\\Property",
+                    "translatable_id": 10,
+                    "locale": "id",
+                    "fields": "{\"short_description\":\"Pilihan desain tropis dengan material alami dan hubungan antara ruang dalam dan luar.\",\"description\":\"Konsep hunian tropis dengan material alami, ruang keluarga yang terbuka, serta hubungan yang terencana antara interior dan area luar. Jelajahi galeri serta spesifikasi untuk memahami tata ruang dan fasilitasnya.\",\"furnishing\":\"Tata ruang dengan perabot lengkap\"}",
+                    "created_at": "2026-11-02 16:35:53",
+                    "updated_at": "2026-11-02 16:35:53"
+                }
+            ]
+        },
+        {
+            "property": {
+                "id": 11,
+                "property_code": "DEMO-PM-011",
+                "title": "Coastal Garden Plot",
+                "slug": "demo-coastal-garden-plot",
+                "property_type_id": 2,
+                "location_id": 6,
+                "listing_type": "sale",
+                "short_description": "Demo listing with AI-generated architectural illustrations. All prices and specifications are fictional.",
+                "description": "DEMO PROPERTY — for website preview only. This is not a real property offered by PropertyME. Images are AI-generated illustrations; location, price, availability, ownership and specifications are examples.\n\nAn illustrative landscape concept with open green space, tropical planting and a rural setting. Use this example to explore land listing specifications and property inquiries.\n\nFor a genuine property inquiry, replace this example with verified listing details and approved photography through the admin CMS. No investment return or rental availability is represented by this demonstration.",
+                "price": "4250000000.00",
+                "currency": "IDR",
+                "price_unit": null,
+                "show_price": 1,
+                "bedrooms": null,
+                "bathrooms": null,
+                "land_area": "1250.00",
+                "building_area": null,
+                "floors": null,
+                "max_guests": null,
+                "furnishing": null,
+                "ownership_type": "Freehold",
+                "location_description": null,
+                "latitude": null,
+                "longitude": null,
+                "show_exact_location": 0,
+                "status": "reserved",
+                "publication_status": "published",
+                "is_featured": 0,
+                "seo_title": "Coastal Garden Plot — Demo Listing | PropertyME",
+                "meta_description": "Illustrative demo property. Not a real listing. All images, specifications and prices are examples.",
+                "canonical_url": null,
+                "published_at": "2026-11-02 15:16:47",
+                "created_at": "2026-11-02 15:27:47",
+                "updated_at": "2026-11-02 15:27:47",
+                "deleted_at": null,
+                "is_demo": 1,
+                "development_status": null,
+                "year_built": null,
+                "lease_years": null,
+                "handover": null
+            },
+            "images": [
+                {
+                    "id": 27,
+                    "property_id": 11,
+                    "image_path": "images/a8c497a9-d8ac-5aa9-a82b-16180ba1edd0.webp",
+                    "alt_text": "AI-generated illustration for Coastal Garden Plot — demo only",
+                    "is_primary": 1,
+                    "sort_order": 0,
+                    "created_at": "2026-11-02 15:27:47",
+                    "updated_at": "2026-11-02 15:27:47"
+                }
+            ],
+            "amenities": [
+                3,
+                6
+            ],
+            "translations": [
+                {
+                    "id": 32,
+                    "translatable_type": "App\\Models\\Property",
+                    "translatable_id": 11,
+                    "locale": "id",
+                    "fields": "{\"short_description\":\"Pilihan desain tropis dengan material alami dan hubungan antara ruang dalam dan luar.\",\"description\":\"Lanskap hijau dengan vegetasi tropis dan suasana pedesaan. Informasi luas, lokasi, dan kepemilikan dapat didiskusikan lebih lanjut bersama tim.\"}",
+                    "created_at": "2026-11-02 16:35:53",
+                    "updated_at": "2026-11-02 16:35:53"
+                }
+            ]
+        },
+        {
+            "property": {
+                "id": 12,
+                "property_code": "DEMO-PM-012",
+                "title": "Palm House Collection",
+                "slug": "demo-palm-house-collection",
+                "property_type_id": 1,
+                "location_id": 8,
+                "listing_type": "sale",
+                "short_description": "Demo listing with AI-generated architectural illustrations. All prices and specifications are fictional.",
+                "description": "DEMO PROPERTY — for website preview only. This is not a real property offered by PropertyME. Images are AI-generated illustrations; location, price, availability, ownership and specifications are examples.\n\nA contemporary tropical design concept with natural materials, open living spaces and a considered connection between indoor and outdoor areas. Explore the gallery and specifications to preview the property browsing experience.\n\nFor a genuine property inquiry, replace this example with verified listing details and approved photography through the admin CMS. No investment return or rental availability is represented by this demonstration.",
+                "price": "5600000000.00",
+                "currency": "IDR",
+                "price_unit": null,
+                "show_price": 1,
+                "bedrooms": 3,
+                "bathrooms": 3,
+                "land_area": "280.00",
+                "building_area": "190.00",
+                "floors": 2,
+                "max_guests": null,
+                "furnishing": "Illustrative fully furnished layout",
+                "ownership_type": "Leasehold",
+                "location_description": null,
+                "latitude": null,
+                "longitude": null,
+                "show_exact_location": 0,
+                "status": "sold",
+                "publication_status": "published",
+                "is_featured": 0,
+                "seo_title": "Palm House Collection — Demo Listing | PropertyME",
+                "meta_description": "Illustrative demo property. Not a real listing. All images, specifications and prices are examples.",
+                "canonical_url": null,
+                "published_at": "2026-11-02 15:15:47",
+                "created_at": "2026-11-02 15:27:47",
+                "updated_at": "2026-11-02 15:27:47",
+                "deleted_at": null,
+                "is_demo": 1,
+                "development_status": "completed",
+                "year_built": 2025,
+                "lease_years": 30,
+                "handover": null
+            },
+            "images": [
+                {
+                    "id": 28,
+                    "property_id": 12,
+                    "image_path": "images/e3ee6902-af87-5d74-8dd0-f7aa9907b3e3.webp",
+                    "alt_text": "AI-generated illustration for Palm House Collection — demo only",
+                    "is_primary": 1,
+                    "sort_order": 0,
+                    "created_at": "2026-11-02 15:27:47",
+                    "updated_at": "2026-11-02 15:27:47"
+                },
+                {
+                    "id": 29,
+                    "property_id": 12,
+                    "image_path": "images/68ff6516-428c-5745-a113-383d6d5df61e.webp",
+                    "alt_text": "AI-generated illustration for Palm House Collection — demo only",
+                    "is_primary": 0,
+                    "sort_order": 1,
+                    "created_at": "2026-11-02 15:27:47",
+                    "updated_at": "2026-11-02 15:27:47"
+                },
+                {
+                    "id": 30,
+                    "property_id": 12,
+                    "image_path": "images/9777b221-3b17-5da6-aa28-188974765005.webp",
+                    "alt_text": "AI-generated illustration for Palm House Collection — demo only",
+                    "is_primary": 0,
+                    "sort_order": 2,
+                    "created_at": "2026-11-02 15:27:47",
+                    "updated_at": "2026-11-02 15:27:47"
+                }
+            ],
+            "amenities": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "translations": [
+                {
+                    "id": 33,
+                    "translatable_type": "App\\Models\\Property",
+                    "translatable_id": 12,
+                    "locale": "id",
+                    "fields": "{\"short_description\":\"Pilihan desain tropis dengan material alami dan hubungan antara ruang dalam dan luar.\",\"description\":\"Konsep hunian tropis dengan material alami, ruang keluarga yang terbuka, serta hubungan yang terencana antara interior dan area luar. Jelajahi galeri serta spesifikasi untuk memahami tata ruang dan fasilitasnya.\",\"furnishing\":\"Tata ruang dengan perabot lengkap\"}",
+                    "created_at": "2026-11-02 16:35:53",
+                    "updated_at": "2026-11-02 16:35:53"
+                }
+            ]
+        }
+    ],
+    "media": {
+        "images/9fb4b183-8c34-5b2e-99b1-6d23bdab39f3.webp": "1af7785ef01dfbfc1c1755b6121882c47bc92329ae0a215046a4c9e0df841b60",
+        "images/b9403ecf-b257-557c-ba3c-88685a9bd655.webp": "68b48ed5e99578406dc4ff3ece8eadb86aecf0ecf6c7ebb99984184c676617c8",
+        "images/49add7e3-f3e5-5401-a550-8516af7f2b1f.webp": "dc4df234e7c35110d442f1087f6863b34c68af867b345bd3be621cb7750b0d94",
+        "images/e63bf511-297a-5d89-91d6-435ed6118da6.webp": "5ec84bd50e02c10c57461ed7c2a13f8c35a087c7acbed45ef6c71ce79760c050",
+        "images/58e9fdc7-7fc2-5131-918d-5f7cb9e9e2c8.webp": "68b48ed5e99578406dc4ff3ece8eadb86aecf0ecf6c7ebb99984184c676617c8",
+        "images/47117087-a5c4-5f23-b332-7b4798d0c66c.webp": "dc4df234e7c35110d442f1087f6863b34c68af867b345bd3be621cb7750b0d94",
+        "images/3037f7ad-8350-516b-ab20-08d521c7ec0f.webp": "dc4df234e7c35110d442f1087f6863b34c68af867b345bd3be621cb7750b0d94",
+        "images/fd5c85fc-5d77-5a39-9ffa-db306ba9ef90.webp": "68b48ed5e99578406dc4ff3ece8eadb86aecf0ecf6c7ebb99984184c676617c8",
+        "images/9bc84686-cd93-5ebd-a5d2-8a8fecbf579c.webp": "1af7785ef01dfbfc1c1755b6121882c47bc92329ae0a215046a4c9e0df841b60",
+        "images/42729010-fff9-5186-aca7-765093a0f9ea.webp": "68b48ed5e99578406dc4ff3ece8eadb86aecf0ecf6c7ebb99984184c676617c8",
+        "images/c574ec0c-8c51-5397-ab82-ffe77f5fea02.webp": "dc4df234e7c35110d442f1087f6863b34c68af867b345bd3be621cb7750b0d94",
+        "images/c02e8962-6f80-57e4-9592-33d772c82f9c.webp": "1af7785ef01dfbfc1c1755b6121882c47bc92329ae0a215046a4c9e0df841b60",
+        "images/c1520830-dd32-579a-ae0a-60b0875ab2bb.webp": "68b48ed5e99578406dc4ff3ece8eadb86aecf0ecf6c7ebb99984184c676617c8",
+        "images/f1a3e717-c85d-510b-87b1-f89f0c8641b4.webp": "dc4df234e7c35110d442f1087f6863b34c68af867b345bd3be621cb7750b0d94",
+        "images/103dacfb-b420-51f3-a83b-95e5f26aa515.webp": "46cf18d2915742d11de5301b5c69d7dacec473a8717f933a97e8da1fd122a887",
+        "images/1da5df80-2fb0-5d46-accb-d8cee38880a9.webp": "1af7785ef01dfbfc1c1755b6121882c47bc92329ae0a215046a4c9e0df841b60",
+        "images/39b46bc9-85a1-5b9c-bf5e-1c195b335acd.webp": "68b48ed5e99578406dc4ff3ece8eadb86aecf0ecf6c7ebb99984184c676617c8",
+        "images/73b3d2ed-fd66-52bd-b9f1-3bfe5e45ba26.webp": "dc4df234e7c35110d442f1087f6863b34c68af867b345bd3be621cb7750b0d94",
+        "images/0b47a253-eeb2-5fce-9666-8bb6685f7a32.webp": "dc4df234e7c35110d442f1087f6863b34c68af867b345bd3be621cb7750b0d94",
+        "images/39f71cc4-cd98-577e-add9-25aa32bd4a9a.webp": "68b48ed5e99578406dc4ff3ece8eadb86aecf0ecf6c7ebb99984184c676617c8",
+        "images/25c3ea1f-bf35-59ad-97e2-464fc4fc656f.webp": "1af7785ef01dfbfc1c1755b6121882c47bc92329ae0a215046a4c9e0df841b60",
+        "images/a5e05b18-353a-5a55-a25d-640d155da0a0.webp": "5ec84bd50e02c10c57461ed7c2a13f8c35a087c7acbed45ef6c71ce79760c050",
+        "images/dc6b8219-512d-5a3b-9bd4-aebab8ad4e9d.webp": "68b48ed5e99578406dc4ff3ece8eadb86aecf0ecf6c7ebb99984184c676617c8",
+        "images/f99b591c-7c05-5c3d-b3ce-751d206e90f8.webp": "dc4df234e7c35110d442f1087f6863b34c68af867b345bd3be621cb7750b0d94",
+        "images/c0772e19-4e4a-5bcf-9618-207359a5c231.webp": "68b48ed5e99578406dc4ff3ece8eadb86aecf0ecf6c7ebb99984184c676617c8",
+        "images/28894949-8b0c-5d02-9ba6-faa55317277a.webp": "dc4df234e7c35110d442f1087f6863b34c68af867b345bd3be621cb7750b0d94",
+        "images/a8c497a9-d8ac-5aa9-a82b-16180ba1edd0.webp": "46cf18d2915742d11de5301b5c69d7dacec473a8717f933a97e8da1fd122a887",
+        "images/e3ee6902-af87-5d74-8dd0-f7aa9907b3e3.webp": "1af7785ef01dfbfc1c1755b6121882c47bc92329ae0a215046a4c9e0df841b60",
+        "images/68ff6516-428c-5745-a113-383d6d5df61e.webp": "68b48ed5e99578406dc4ff3ece8eadb86aecf0ecf6c7ebb99984184c676617c8",
+        "images/9777b221-3b17-5da6-aa28-188974765005.webp": "dc4df234e7c35110d442f1087f6863b34c68af867b345bd3be621cb7750b0d94"
+    }
+}

@@ -6,7 +6,13 @@ class PublicContent
 {
     public static function demoEnabled(): bool
     {
-        return app()->environment(['local', 'testing']) || config('propertyme.demo_content_enabled', false);
+        return app()->environment(['local', 'testing']) || self::hostedDemoEnabled();
+    }
+
+    public static function hostedDemoEnabled(): bool
+    {
+        return config('propertyme.demo_content_enabled', false)
+            || app(\App\Services\Settings::class)->enabled(\App\Services\BundledPropertyInstaller::PREVIEW_KEY);
     }
 
     public static function description($record): string

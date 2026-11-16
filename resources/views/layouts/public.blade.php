@@ -1,7 +1,8 @@
 @php
     $settings = app(\App\Services\Settings::class);
     $whatsapp = app(\App\Services\WhatsAppService::class);
-    $demoMode = config('propertyme.demo_content_enabled') || (app()->environment(['local','testing']) && $settings->enabled('demo.content_enabled'));
+    $hostedPreview = \App\Support\PublicContent::hostedDemoEnabled();
+    $demoMode = $hostedPreview || (app()->environment(['local','testing']) && $settings->enabled('demo.content_enabled'));
     $metaTitle = trim($__env->yieldContent('title')) ?: $settings->get('seo.title', 'PropertyME | Bali Real Estate');
     $metaDescription = trim($__env->yieldContent('description')) ?: $settings->get('seo.description');
     $canonical = trim($__env->yieldContent('canonical')) ?: url()->current();
@@ -22,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://images.unsplash.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 @vite(['resources/css/app.css','resources/js/app.js'])
 <script type="application/ld+json">{!! json_encode($organization, JSON_HEX_TAG|JSON_HEX_AMP|JSON_HEX_APOS|JSON_HEX_QUOT|JSON_UNESCAPED_SLASHES) !!}</script>@stack('head')
-</head><body class="{{ request()->routeIs('properties.show') ? 'pb-24 sm:pb-0' : '' }}"><a href="#main-content" class="sr-only z-50 bg-gold p-4 text-navy focus:fixed focus:left-4 focus:top-4 focus:not-sr-only">{{ __('Skip to content') }}</a><x-navbar/><main id="main-content">@if(config('propertyme.demo_content_enabled'))<div class="container-wide pt-10"><x-demo-notice kind="content"/></div>@endif @yield('content')</main><x-footer/>
+</head><body class="{{ request()->routeIs('properties.show') ? 'pb-24 sm:pb-0' : '' }}"><a href="#main-content" class="sr-only z-50 bg-gold p-4 text-navy focus:fixed focus:left-4 focus:top-4 focus:not-sr-only">{{ __('Skip to content') }}</a><x-navbar/><main id="main-content">@if($hostedPreview)<div class="container-wide pt-10"><x-demo-notice kind="content"/></div>@endif @yield('content')</main><x-footer/>
 <x-contact-widget :property="request()->routeIs('properties.show') ? ($property ?? null) : null"/>
 <x-comparison-bar/>
 @stack('scripts')</body></html>

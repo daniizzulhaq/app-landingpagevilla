@@ -16,7 +16,7 @@ return Application::configure(basePath: dirname(__DIR__))
 
         $middleware->redirectGuestsTo(fn () => route('admin.login'));
         $middleware->redirectUsersTo(fn () => route('admin.dashboard'));
-        $middleware->web(append: [\App\Http\Middleware\SetPublicLocale::class,\App\Http\Middleware\SecurityHeaders::class]);
+        $middleware->web(append: [\App\Http\Middleware\InstallBundledProperties::class,\App\Http\Middleware\SetPublicLocale::class,\App\Http\Middleware\SecurityHeaders::class]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

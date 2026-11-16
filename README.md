@@ -58,7 +58,9 @@ Seeder bersifat idempotent (`firstOrCreate`) dan tidak menimpa konten admin. See
 
 ## Data demo dan desain katalog
 
-Data preview lokal dan unggahan demo diabaikan Git dan tidak disertakan dalam repository. Database server lokal yang terpisah juga tidak disertakan dalam repository. Instalasi baru melalui seeder default tidak membuat properti, portfolio, testimoni, atau akun admin demo.
+Salinan 12 properti dari database lokal, fasilitas, terjemahan, dan 30 gambar galeri disertakan di `database/content/local-properties/`. Lima berkas gambar unik dipakai ulang untuk 30 entri galeri. Setelah kode di-push dan di-pull pada hosting yang sudah terpasang, kunjungan web pertama dengan `APP_ENV=production` memasukkan data dan menyalin gambar secara otomatis. Tidak perlu impor SQL, mengubah `.env`, atau menjalankan seeder. Installer mempertahankan properti hosting yang sudah ada, termasuk edit dan soft delete, serta menampilkan data demo melalui pengaturan database yang tetap berlaku saat konfigurasi di-cache. Lihat [panduan hosting](docs/DEPLOYMENT.md#data-villa-contoh-di-hosting).
+
+Untuk menyertakan properti lokal tambahan pada pembaruan berikutnya, jalankan `php artisan propertyme:export-properties` **di lokal**, lalu sertakan perubahan `database/content/local-properties/` saat push. Installer menambah listing yang belum ada; perubahan pada listing hosting tetap dikelola lewat admin. Akun, session, pengaturan perusahaan, dan database mentah tidak disertakan dalam snapshot. Seeder default sendiri tetap tidak membuat listing.
 
 Seeder demo tidak dipanggil oleh seeder default. Untuk menambah contoh pada instalasi development lain:
 
@@ -66,7 +68,7 @@ Seeder demo tidak dipanggil oleh seeder default. Untuk menambah contoh pada inst
 php artisan db:seed --class=DemoContentSeeder
 ```
 
-Seeder menerima environment `local`/`testing` atau hosting preview yang mengaktifkan `DEMO_CONTENT_ENABLED=true`, mempertahankan edit admin dan tidak menggandakan data saat dijalankan lagi. Listing serta portfolio demo tidak masuk sitemap dan tidak memiliki schema properti. Pada produksi data demo tersembunyi secara default; lihat [panduan preview hosting](docs/DEPLOYMENT.md#data-villa-contoh-di-hosting) untuk mengisi dan menampilkannya secara eksplisit. Akun demo tetap ditolak pada login dan Gate admin produksi. Buat akun dan listing riil sebelum peluncuran.
+Seeder menerima environment `local`/`testing` atau hosting preview yang telah diaktifkan, mempertahankan edit admin dan tidak menggandakan data saat dijalankan lagi. Alur pull otomatis memakai snapshot database lokal, tanpa memanggil seeder demo. Listing serta portfolio demo tidak masuk sitemap dan tidak memiliki schema properti. Akun demo tetap ditolak pada login dan Gate admin produksi. Buat akun dan listing riil sebelum peluncuran.
 
 Hero memakai tab Buy/Sell/Rent/Management dan pencarian database. Bagian featured memiliki filter For sale/For rent serta All/Leasehold/Freehold/Land. Kartu katalog menampilkan cover, harga, badge ownership/development, spesifikasi, dan carousel foto. Tombol berbagi menggunakan native share atau menyalin link; tombol hati menyimpan pilihan di `localStorage` browser tanpa akun pelanggan.
 

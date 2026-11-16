@@ -45,33 +45,33 @@ php artisan view:cache
 
 Seeder tidak menimpa data yang sudah ada. Perubahan copy editorial berikutnya dilakukan melalui CMS. Seluruh akun aplikasi adalah admin dan hanya dibuat melalui command; tidak ada registrasi publik.
 
-Repository tidak menyertakan database atau unggahan demo. `DemoContentSeeder` tersedia secara opsional, terpisah dari `DatabaseSeeder`. Record `is_demo` disembunyikan dari website publik produksi secara default; hosting preview dapat mengaktifkannya dengan langkah berikut. Akun demo tetap ditolak oleh autentikasi/Gate. Buat akun admin riil dengan email perusahaan melalui command sebelum peluncuran.
+Repository menyertakan snapshot khusus listing lokal dan gambar galerinya; akun, session, rahasia dan database mentah tidak disertakan. `DemoContentSeeder` tersedia secara opsional, terpisah dari `DatabaseSeeder`. Alur otomatis berikut tidak memanggil seeder demo. Akun demo tetap ditolak oleh autentikasi/Gate. Buat akun admin riil dengan email perusahaan melalui command sebelum peluncuran.
 
 ## Data villa contoh di hosting
 
-Deploy kode terbaru terlebih dahulu, termasuk `public/images/demo/` (lima gambar WebP). Data lokal tidak ikut dipindah hanya dengan mengunggah kode. Seeder default tidak membuat listing; mode produksi juga menyembunyikan record demo kecuali opsi preview diaktifkan.
-
-Untuk mengisi katalog hosting dengan 12 contoh properti (termasuk villa), enam portfolio dan galeri, tambahkan ke `.env` **di hosting**:
-
-```dotenv
-DEMO_CONTENT_ENABLED=true
-```
-
-Pertahankan `APP_ENV=production` dan `APP_DEBUG=false`. Dari Terminal/SSH hosting, masuk ke direktori proyek (yang berisi `artisan`) dan jalankan:
+Untuk hosting yang sudah menjalankan aplikasi dan memiliki database beserta tabelnya, cukup push semua perubahan dari lokal, kemudian jalankan di hosting:
 
 ```sh
-php artisan config:clear
-php artisan migrate --force
-php artisan db:seed --class=DemoContentSeeder --force
-php artisan config:cache
-php artisan view:clear
+git pull
 ```
 
-Seeder menyalin gambar ke `storage/app/public/images/`; pastikan direktori dapat ditulis. Media disajikan lewat `/media/images/{uuid}.webp`, tanpa wajib symlink. Seeder dapat dijalankan ulang tanpa menggandakan listing atau menimpa edit listing admin yang sudah ada. Seeder juga mengisi ilustrasi halaman/layanan yang masih kosong. Tidak ada akun login yang dibuat atau diubah; testimoni contoh tetap tidak ditampilkan publik.
+Lalu buka website. Pada kunjungan HTTP pertama dengan `APP_ENV=production`, middleware membaca `database/content/local-properties/`, memasukkan salinan **12 properti lokal**, fasilitas dan terjemahan, serta menyalin **30 gambar galeri** ke `storage/app/public/images/`. Gambar identik disimpan sekali di Git dan disalin sesuai nama file aslinya saat pemasangan. Media disajikan lewat `/media/images/{uuid}.webp`, tanpa wajib symlink.
 
-Periksa `/properties`, detail villa, galeri dan `/portfolio` pada domain hosting. Opsi preview menampilkan pemberitahuan bahwa data dan harga adalah contoh dengan gambar AI, serta memberi `noindex` pada halaman publik. Listing demo tetap dikecualikan dari sitemap dan schema properti.
+Tidak perlu mengimpor SQL, mengubah `.env`, menjalankan seeder, memasang Git hook, atau memperbarui cache konfigurasi. Visibilitas record demo diaktifkan melalui setting database, sehingga konfigurasi hosting yang sudah di-cache tetap dapat dipakai. Pertahankan `APP_DEBUG=false` dan izin tulis Laravel yang sudah ada untuk `storage/`.
 
-Setelah listing nyata siap, ubah `DEMO_CONTENT_ENABLED=false` lalu jalankan `php artisan config:cache`. Data demo langsung tersembunyi tanpa menghapus data atau listing nyata. Jika hosting tidak menyediakan Terminal/SSH, minta penyedia menjalankan perintah tersebut di direktori aplikasi.
+Installer menyimpan checksum versi di database. Kunjungan berikutnya hanya memeriksa versi, tanpa mengulang impor. Lock file dan lock database mencegah dua kunjungan mengimpor bersamaan. Media diverifikasi dan disalin sebelum transaksi database ditandai selesai; pemasangan yang gagal dapat dicoba lagi pada kunjungan berikutnya.
+
+Record dengan kode **atau** slug yang sudah ada dilewati beserta relasinya. Edit admin, draft, dan soft delete dipertahankan; ID referensi dipetakan ulang sesuai database hosting. Installer tidak membuat atau mengubah akun, pengaturan perusahaan, portfolio, layanan atau testimoni. Situs preview menampilkan keterangan data contoh dan `noindex`; listing demo tetap dikecualikan dari sitemap dan schema properti.
+
+Untuk memasukkan properti lokal tambahan pada pembaruan berikutnya, jalankan **di lokal sebelum push**:
+
+```sh
+php artisan propertyme:export-properties
+```
+
+Sertakan seluruh perubahan `database/content/local-properties/` saat commit/push; di hosting tetap cukup pull dan buka website. Data untuk listing yang sudah ada di hosting dikelola melalui admin; snapshot tidak menimpanya. Snapshot dapat diekspor hanya pada environment `local`/`testing`.
+
+Saat ingin menyembunyikan preview otomatis, ubah nilai `website_settings` untuk key `demo.local_properties_enabled` menjadi `0` dan pastikan `DEMO_CONTENT_ENABLED` tidak aktif. Installer mempertahankan pilihan ini pada versi berikutnya. Data listing tidak dihapus. Instalasi hosting baru tetap mengikuti langkah instalasi aplikasi di atas untuk menyiapkan database, dependensi dan akun terlebih dahulu.
 
 ## Web server
 
